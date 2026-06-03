@@ -687,3 +687,247 @@ progress::-moz-progress-bar {
     background-color: #0b5ea8;
     border-radius: 4px;
 }
+
+/* ============================================================
+   BLOQUES NUEVOS AÑADIDOS: Se colocan al final para sobreescribir
+   reglas anteriores si fuera necesario.
+============================================================ */
+
+section {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/*
+BLOQUE 6: ASIDE
+Aside contiene informacion complementaria
+*/
+aside {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+aside i {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #0b5ea8;
+}
+
+/*
+BLOQUE 7: IMÁGENES Y MULTIMEDIA
+*/
+img,
+video,
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+}
+
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+figcaption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/*
+BLOQUE 8: LISTAS
+*/
+ol,
+ul {
+    padding-left: 40px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/*
+BLOQUE 9: TABLAS
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0d1910;
+}
+
+th {
+    background-color: #0b5ea8;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #f7fffa;
+}
+
+/*
+BLOQUE 10: FORMULARIOS
+*/
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0d1910;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #1b7505;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #dba112;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #0b5ea8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #074f73;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #0b5ea8;
+    box-shadow: 0 0 5px #0b5ea8;
+}
+input:required,
+select:required,
+textarea:required {
+    border-left: 5px solid #074f73;
+}
+/* BLOQUE 11: DETAILS, SUMMARY y PROGRESS/METER */
+details {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #0b5ea8;
+    box-shadow: 0 4px 10px #ffffff;
+    margin-bottom: 20px;
+}
+summary {
+    font-weight: bold;
+    color: #0d1910;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+summary:hover {
+    background-color: #074f73;
+    color: #0d1910;
+}
+progress,meter{
+    width: 260px;
+    height: 20px;
+}
+/*BLOQUE 12: TEXTO TECNICO (si es necesario) */
+code{
+    background-color: #e7fbff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0b5ea8;
+}
+pre{
+    background-color: #e7fbff;
+    padding: 15px;
+    border-radius: 8px;
+}
+kbd{
+    background-color: #e7fbff;
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+
+/* Asegurar que el título se centre junto al logo */
+header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header .header-inner h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Forzar que logo y título no crezcan y se mantengan juntos centrados */
+header .header-inner img,
+header .header-inner h1 {
+    flex: 0 0 auto;
+}
+
+header .header-inner img {
+    margin: 0;
+}

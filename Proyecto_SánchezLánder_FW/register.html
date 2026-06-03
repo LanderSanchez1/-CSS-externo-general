@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MediCitas Web - Registro</title>
+  <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
+      <h1>MediCitas Web</h1>
+    </div>
+  </header>
+
+  <main>
+    <section style="background: white; max-width: 460px; width: 100%; margin: 20px auto; padding: 18px; border: 1px solid #e3e3e3; border-radius: 8px;">
+      <h2>Registro de usuario</h2>
+      <img src="images/icono.png" alt="Registro" style="width: 80px; height: 80px; display: block; margin: 15px auto;">
+      <form action="index.html" method="get">
+        <label for="nombres">Nombres</label>
+        <input id="nombres" name="nombres" type="text" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" required>
+
+        <label for="cedula">Cédula</label>
+        <input id="cedula" name="cedula" type="text" maxlength="10" required>
+
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input id="nacimiento" name="nacimiento" type="date" required>
+
+        <label for="genero">Género</label>
+        <select id="genero" name="genero" required>
+          <option value="">Seleccione</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select>
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="regpass">Contraseña</label>
+        <input id="regpass" name="regpass" type="password" minlength="8" maxlength="16" required>
+
+        <button type="submit">Registrar</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 16px;">¿Ya tienes cuenta? <a href="login.html">Volver al inicio de sesión</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p> 2026 MediCitas Web</p>
+  </footer>
+</body>
+</html>
+
+

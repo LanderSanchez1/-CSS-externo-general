@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MediCitas Web - Iniciar sesión</title>
+
+    <link rel="icon" type="image/png" href="./images/icono.png">
+
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
+      <h1>MediCitas Web</h1>
+    </div>
+  </header>
+
+  <main>
+    <section style="background: white; max-width: 460px; width: 100%; margin: 20px auto; padding: 18px; border: 1px solid #e3e3e3; border-radius: 8px;">
+      <h2>Iniciar sesión</h2>
+      <img src="images/icono.png" alt="Iniciar sesión" style="width: 80px; height: 80px; display: block; margin: 15px auto;">
+      <form action="index.html" method="get">
+        <label for="user">Usuario o correo electrónico</label>
+        <input id="user" name="user" type="text" required>
+
+        <label for="password">Contraseña</label>
+        <input id="password" name="password" type="password" minlength="8" maxlength="16" required>
+
+        <button type="submit">Ingresar</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 16px;">¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p> 2026 MediCitas Web</p>
+  </footer>
+</body>
+</html>
+
+

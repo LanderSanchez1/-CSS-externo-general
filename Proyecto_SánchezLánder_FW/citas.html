@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MediCitas Web - Citas</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
+      <h1>MediCitas Web</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="specialists.html">Especialistas</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li class="right"><a href="login.html">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Agendar cita médica</h2>
+      <img src="images/doctor.svg" alt="Agendar cita" style="width: 120px; height: auto; display: block; margin: 15px auto;">
+      <p>Complete el formulario para reservar su cita con el especialista deseado.</p>
+    </section>
+
+    <section style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; align-items: start;">
+        <form action="citas.html" method="get" style="background: white; padding: 16px; border: 1px solid #e3e3e3; border-radius: 8px;">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Pérez" required>
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="ejemplo@correo.com" required>
+
+            <label for="especialidad">Especialidad</label>
+            <select id="especialidad" name="especialidad" required>
+                <option value="">Seleccione una especialidad</option>
+                <option value="medicina_general">Medicina general</option>
+                <option value="pediatria">Pediatría</option>
+                <option value="odontologia">Odontología</option>
+            </select>
+
+            <label>Tipo de consulta</label>
+            <div style="display: flex; gap: 12px; margin-top: 6px;">
+                <label style="display: flex; align-items: center; margin-top: 0; font-weight: normal;">
+                    <input type="radio" name="tipo" value="presencial" checked> Presencial
+                </label>
+                <label style="display: flex; align-items: center; margin-top: 0; font-weight: normal;">
+                    <input type="radio" name="tipo" value="virtual"> Virtual
+                </label>
+            </div>
+
+            <label for="fecha">Fecha</label>
+            <input id="fecha" name="fecha" type="date" required>
+
+            <label for="hora">Hora</label>
+            <input id="hora" name="hora" type="time" required>
+
+            <label for="notas">Notas adicionales</label>
+            <textarea id="notas" name="notas" rows="4" placeholder="Ingrese síntomas o comentarios"></textarea>
+
+            <button type="submit">Agendar cita</button>
+        </form>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="images/doctorr.png" alt="Formulario de citas médicas" style="width: 100%; border-radius: 8px; border: 1px solid #dceefb;">
+        </div>
+    </section>
+
+    <section>
+      <h3>Información importante</h3>
+      <p>Por favor, revise todos los datos antes de enviar el formulario. Una vez confirmada su cita, recibirá una notificación por correo electrónico.</p>
+      <ul>
+        <li>Confirme su especialidad médica.</li>
+        <li>Seleccione la fecha y hora disponible.</li>
+        <li>Proporcione detalles adicionales si es necesario.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MediCitas Web</p>
+  </footer>
+</body>
+</html>
+
+

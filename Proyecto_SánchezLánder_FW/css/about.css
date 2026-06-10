@@ -1,0 +1,170 @@
+/* ============================================================
+
+   BLOQUE 1: SECCIÓN ACERCA DE
+
+   Estilos para la página de "Acerca de" con misión, visión
+   y preguntas frecuentes
+
+============================================================ */
+
+#contenido-principal {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid #0b5ea8;
+}
+
+#mision,
+#vision {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e9f5ff 100%);
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid #0b5ea8;
+}
+
+#mision h3,
+#vision h3 {
+    color: #0b5ea8;
+    margin-bottom: 12px;
+}
+
+#mision p,
+#vision p {
+    color: #222;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+
+   BLOQUE 2: PREGUNTAS FRECUENTES
+
+   Estilos para elementos details y summary con diseño
+   personalizado y animaciones suaves
+
+============================================================ */
+
+.faq-section {
+    margin: 24px 0;
+}
+
+.faq-section h3 {
+    margin-bottom: 16px;
+    color: #0b5ea8;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #0b5ea8;
+    box-shadow: 0 4px 8px rgba(11, 94, 168, 0.1);
+}
+
+.faq-item summary {
+    padding: 16px;
+    background: linear-gradient(to right, #f0f8ff, #e9f5ff);
+    cursor: pointer;
+    font-weight: 600;
+    color: #0b5ea8;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.faq-item summary:hover {
+    background: linear-gradient(to right, #e0f0ff, #d9eef9);
+    padding-left: 20px;
+}
+
+.faq-item summary::marker {
+    color: #0b5ea8;
+}
+
+.faq-item[open] summary {
+    background: linear-gradient(to right, #d9eef9, #c9e7f7);
+    border-bottom: 2px solid #0b5ea8;
+}
+
+.faq-item p {
+    padding: 12px 16px 0 16px;
+    color: #333;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+
+/* ============================================================
+
+   BLOQUE 3: BARRAS DE PROGRESO
+
+   Estilos para elementos progress con indicadores visuales
+
+============================================================ */
+
+.progreso-seccion {
+    margin: 24px 0;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #0b5ea8;
+}
+
+.progreso-seccion h3 {
+    color: #0b5ea8;
+    margin-bottom: 16px;
+}
+
+.progreso-item {
+    margin: 16px 0;
+}
+
+.progreso-item p {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #0b5ea8;
+}
+
+.progreso-item progress {
+    height: 24px;
+    border-radius: 12px;
+}
+
+.porcentaje {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* ============================================================
+
+   BLOQUE 4: GRÁFICAS Y EVALUACIONES
+
+   Estilos para representaciones visuales de satisfacción
+
+============================================================ */
+
+.satisfaccion {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+    align-items: center;
+}
+
+.estrella {
+    color: #ffc107;
+    font-size: 20px;
+}
+
+.puntuacion {
+    font-weight: 600;
+    color: #0b5ea8;
+    margin-left: 8px;
+}

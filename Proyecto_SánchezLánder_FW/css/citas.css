@@ -1,0 +1,228 @@
+/* ============================================================
+
+   BLOQUE 1: FORMULARIO DE CITAS
+
+   Estilos específicos para el formulario de agendar cita
+   con layout de dos columnas
+
+============================================================ */
+
+#formulario-citas {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 18px;
+    align-items: start;
+    margin: 20px 0;
+}
+
+#form-agendar {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#form-agendar label {
+    display: block;
+    font-weight: 600;
+    color: #0b5ea8;
+    margin: 16px 0 6px 0;
+    font-size: 14px;
+}
+
+#form-agendar input,
+#form-agendar select,
+#form-agendar textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 14px;
+    color: #222;
+    transition: all 0.3s ease;
+    margin-bottom: 4px;
+}
+
+#form-agendar input:focus,
+#form-agendar select:focus,
+#form-agendar textarea:focus {
+    outline: none;
+    border-color: #0b5ea8;
+    box-shadow: 0 0 8px rgba(11, 94, 168, 0.2);
+    background: #fafbfc;
+}
+
+#form-agendar input::placeholder,
+#form-agendar textarea::placeholder {
+    color: #999;
+}
+
+#form-agendar textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* ============================================================
+
+   BLOQUE 2: OPCIONES DE CONSULTA
+
+   Estilos para radio buttons y opciones de tipo de consulta
+
+============================================================ */
+
+.tipo-consulta {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.tipo-consulta label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: 400;
+    color: #222;
+}
+
+.tipo-consulta input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: auto;
+}
+
+
+/* ============================================================
+
+   BLOQUE 3: BOTÓN DE ENVÍO
+
+   Estilos específicos para botón de agendar cita con énfasis
+
+============================================================ */
+
+#btn-agendar-cita {
+    background: linear-gradient(to bottom, #0b5ea8, #084a7c);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+#btn-agendar-cita:hover {
+    background: linear-gradient(to bottom, #084a7c, #062d56);
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.3);
+    transform: translateY(-2px);
+}
+
+#btn-agendar-cita:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+
+   BLOQUE 4: IMAGEN DEL FORMULARIO
+
+   Estilos para la imagen que acompaña el formulario
+
+============================================================ */
+
+.imagen-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-formulario img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #dceefb;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.1);
+}
+
+@media (max-width: 768px) {
+    #formulario-citas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ============================================================
+
+   BLOQUE 5: SECCIÓN DE INFORMACIÓN
+
+   Estilos para la información importante al usuario
+
+============================================================ */
+
+#info-importante {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3e0 100%);
+    border-left: 4px solid #ffc107;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#info-importante h3 {
+    color: #e65100;
+    margin-bottom: 12px;
+}
+
+#info-importante p {
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+#info-importante ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 0;
+}
+
+#info-importante li {
+    padding: 8px 0 8px 24px;
+    position: relative;
+    color: #333;
+}
+
+#info-importante li::before {
+    content: "→ ";
+    color: #ffc107;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+/* ============================================================
+   BLOQUE 6: SECCIÓN DE ENCABEZADO
+   Centra el título, imagen y descripción de la página de citas
+============================================================ */
+
+#formulario-citas ~ section:first-of-type,
+main > section:first-child {
+    text-align: center;
+}
+
+main > section:first-child h2 {
+    text-align: center;
+}
+
+main > section:first-child img {
+    margin: 10px auto;
+}
+
+main > section:first-child p {
+    text-align: center;
+}

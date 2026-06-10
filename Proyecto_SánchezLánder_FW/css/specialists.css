@@ -1,0 +1,205 @@
+/* ============================================================
+
+   BLOQUE 1: INFORMACIÓN DE ESPECIALISTAS
+
+   Estilos para la sección de especialistas con artículos
+   y descripciones de especialidades
+
+============================================================ */
+
+.content {
+    background: white;
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid #0b5ea8;
+}
+
+.content h2 {
+    color: #0b5ea8;
+    border-bottom: 2px solid #0b5ea8;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.8;
+}
+
+.content article {
+    background: linear-gradient(135deg, #f0f8ff 0%, #fafbfc 100%);
+    padding: 18px;
+    margin: 16px 0;
+    border-left: 4px solid #0d7ab7;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(11, 94, 168, 0.05);
+}
+
+.content article:hover {
+    box-shadow: 0 6px 12px rgba(11, 94, 168, 0.15);
+    transform: translateX(4px);
+    border-left-color: #0b5ea8;
+}
+
+.content article h3 {
+    color: #0b5ea8;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.content article p {
+    color: #222;
+    font-size: 14px;
+}
+
+.separador {
+    margin: 16px 0;
+    border-top: 2px solid #0b5ea8;
+    opacity: 0.5;
+}
+
+
+/* ============================================================
+
+   BLOQUE 2: INSTRUCCIONES PARA ELEGIR ESPECIALISTA
+
+   Estilos para recomendaciones y guías de selección
+
+============================================================ */
+
+.guia-seleccion {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e9f5ff 100%);
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px 0;
+    border: 2px solid #0b5ea8;
+}
+
+.guia-seleccion h3 {
+    color: #0b5ea8;
+    margin-bottom: 16px;
+}
+
+.guia-seleccion p {
+    color: #222;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.guia-seleccion ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.guia-seleccion li {
+    background: white;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-left: 4px solid #0b5ea8;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.guia-seleccion li:hover {
+    background: #f5fbff;
+    transform: translateX(4px);
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.1);
+}
+
+.guia-seleccion li::before {
+    content: "✓ ";
+    color: #0b5ea8;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* ============================================================
+
+   BLOQUE 3: TARJETAS DE ESPECIALISTA
+
+   Estilos reutilizables para presentar información de
+   cada especialista en formato de tarjeta
+
+============================================================ */
+
+.especialista-card {
+    background: white;
+    border: 2px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 16px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.especialista-card:hover {
+    border-color: #0b5ea8;
+    box-shadow: 0 6px 16px rgba(11, 94, 168, 0.2);
+    transform: translateY(-4px);
+}
+
+.especialista-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.especialista-card h4 {
+    color: #0b5ea8;
+    margin-bottom: 8px;
+}
+
+.especialista-card p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.especialista-info {
+    font-size: 13px;
+    color: #666;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e3e3e3;
+}
+
+
+/* ============================================================
+
+   BLOQUE 4: BOTÓN DE AGENDAR
+
+   Estilos específicos para botones de acción con énfasis
+
+============================================================ */
+
+.btn-agendar {
+    background: linear-gradient(to bottom, #0b5ea8, #084a7c);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 16px 0;
+    display: inline-block;
+}
+
+.btn-agendar:hover {
+    background: linear-gradient(to bottom, #084a7c, #062d56);
+    box-shadow: 0 6px 12px rgba(11, 94, 168, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-agendar:active {
+    transform: translateY(0);
+}

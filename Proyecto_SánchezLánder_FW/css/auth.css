@@ -1,0 +1,238 @@
+/* ============================================================
+
+   BLOQUE 1: CONTENEDOR DE FORMULARIO
+
+   Estilos para la sección principal que contiene formularios
+   de login y registro
+
+============================================================ */
+
+#form-container {
+    background: white;
+    max-width: 460px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 24px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#form-container h2 {
+    color: #0b5ea8;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0b5ea8;
+    padding-bottom: 12px;
+}
+
+#form-container img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(11, 94, 168, 0.15);
+}
+
+
+/* ============================================================
+
+   BLOQUE 2: FORMULARIO DE LOGIN
+
+   Estilos específicos para el formulario de inicio de sesión
+
+============================================================ */
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#form-login label {
+    font-weight: 600;
+    color: #0b5ea8;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+#form-login input {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#form-login input:focus {
+    outline: none;
+    border-color: #0b5ea8;
+    box-shadow: 0 0 8px rgba(11, 94, 168, 0.2);
+    background: #fafbfc;
+}
+
+#form-login button {
+    background: linear-gradient(to bottom, #0b5ea8, #084a7c);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+}
+
+#form-login button:hover {
+    background: linear-gradient(to bottom, #084a7c, #062d56);
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.3);
+    transform: translateY(-2px);
+}
+
+#form-login button:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+
+   BLOQUE 3: FORMULARIO DE REGISTRO
+
+   Estilos específicos para el formulario de registro
+
+============================================================ */
+
+#form-register {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#form-register label {
+    font-weight: 600;
+    color: #0b5ea8;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+#form-register input,
+#form-register select {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#form-register input:focus,
+#form-register select:focus {
+    outline: none;
+    border-color: #0b5ea8;
+    box-shadow: 0 0 8px rgba(11, 94, 168, 0.2);
+    background: #fafbfc;
+}
+
+#form-register select {
+    cursor: pointer;
+}
+
+#form-register button {
+    background: linear-gradient(to bottom, #0b5ea8, #084a7c);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+}
+
+#form-register button:hover {
+    background: linear-gradient(to bottom, #084a7c, #062d56);
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.3);
+    transform: translateY(-2px);
+}
+
+#form-register button:active {
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+
+   BLOQUE 4: ENLACES ALTERNATIVOS
+
+   Estilos para enlaces a register/login y ayuda
+
+============================================================ */
+
+#enlace-alternativo {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #e3e3e3;
+    font-size: 14px;
+    color: #333;
+}
+
+#enlace-alternativo a {
+    color: #0b5ea8;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#enlace-alternativo a:hover {
+    color: #0d7ab7;
+    text-decoration: underline;
+}
+
+.enlace-ayuda {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+.enlace-ayuda a {
+    color: #0b5ea8;
+}
+
+
+/* ============================================================
+
+   BLOQUE 5: INFORMACIÓN ADICIONAL
+
+   Estilos para mensajes de información y avisos
+
+============================================================ */
+
+.aviso-registro {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e9f5ff 100%);
+    border: 1px solid #d0e9ff;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 20px 0;
+    color: #0b5ea8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.aviso-registro strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #0b5ea8;
+}

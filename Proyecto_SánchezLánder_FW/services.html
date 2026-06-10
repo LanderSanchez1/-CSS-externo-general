@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MediCitas Web - Servicios</title>
+  <link rel="icon" type="image/png" href="./images/servicio.png">
   <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
   <header>
@@ -14,13 +17,13 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Acerca de</a></li>
-        <li><a href="services.html">Servicios</a></li>
-        <li><a href="specialists.html">Especialistas</a></li>
-        <li><a href="citas.html">Citas</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-        <li class="right"><a href="login.html">Cerrar sesión</a></li>
+   <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
+       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
+        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>
@@ -29,17 +32,17 @@
       <section class="content">
           <h2>Servicios médicos</h2>
           <p>En MediCitas Web describimos los servicios disponibles y cómo solicitar atención con el personal médico de la clínica.</p>
-          <hr><hr />
+       
           <article>
               <h3>Reserva de citas</h3>
               <p>El sistema permite seleccionar el servicio y el especialista, así como consultar los horarios de disponibilidad para programar la cita.</p>
           </article>
-          <hr><hr />
+          <hr>
           <article>
               <h3>Especialidades</h3>
               <p>Contamos con varias áreas médicas para atender a toda la familia, desde consultas generales hasta odontología y pediatría.</p>
           </article>
-          <hr><hr />
+          <hr>
           <article>
               <h3>Atención a pacientes</h3>
               <p>El equipo de atención brinda información sobre procesos, documentación necesaria y apoyo para cualquier consulta previa a la cita.</p>
@@ -48,7 +51,7 @@
 
     <section class="content">
         <h3>Descripción de servicios</h3>
-        <table>
+        <table class="tabla-servicios">
             <thead>
                 <tr>
                     <th>Servicio</th>
@@ -58,17 +61,17 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Consulta general</td>
+                    <td><strong>Consulta general</strong></td>
                     <td>Evaluación inicial de síntomas y seguimiento de salud.</td>
                     <td>Adultos y adolescentes</td>
                 </tr>
                 <tr>
-                    <td>Pediatría</td>
+                    <td><strong>Pediatría</strong></td>
                     <td>Atención a niños y control del crecimiento infantil.</td>
                     <td>Niños y adolescentes</td>
                 </tr>
                 <tr>
-                    <td>Odontología</td>
+                    <td><strong>Odontología</strong></td>
                     <td>Revisión dental, limpieza y orientación preventiva.</td>
                     <td>Pacientes de todas las edades</td>
                 </tr>
@@ -77,7 +80,7 @@
 
         <h3>Demanda de servicios médicos</h3>
 
-        <table>
+        <table class="tabla-servicios">
             <thead>
                 <tr>
                     <th>Servicio</th>
@@ -89,7 +92,7 @@
             <tbody>
                 <tr>
                     <td>Consulta general</td>
-                    <td>Alta</td>
+                    <td><span class="ocupacion-alta">Alta</span></td>
                     <td>
                         <progress value="90" max="100"></progress>
                     </td>
@@ -97,7 +100,7 @@
 
                 <tr>
                     <td>Pediatría</td>
-                    <td>Media</td>
+                    <td><span class="ocupacion-media">Media</span></td>
                     <td>
                         <progress value="65" max="100"></progress>
                     </td>
@@ -105,7 +108,7 @@
 
                 <tr>
                     <td>Odontología</td>
-                    <td>Baja</td>
+                    <td><span class="ocupacion-baja">Baja</span></td>
                     <td>
                         <progress value="40" max="100"></progress>
                     </td>

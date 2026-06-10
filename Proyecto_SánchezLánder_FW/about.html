@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>MediCitas Web - Acerca de</title>
+    <link rel="icon" type="image/png" href="./images/informacion.png">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
@@ -17,20 +21,20 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="services.html">Servicios</a></li>
-                <li><a href="specialists.html">Especialistas</a></li>
-                <li><a href="citas.html">Citas</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li class="right"><a href="login.html">Cerrar sesión</a></li>
+               <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
+       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
+        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
 
-        <section class="content">
+        <section id="contenido-principal">
 
             <h2>Sobre MediCitas Web</h2>
 
@@ -40,63 +44,75 @@
                 una experiencia clara, rápida y ordenada para el paciente.
             </p>
 
-            <h3>Misión</h3>
-
-            <p>
-                Brindar un servicio confiable de gestión de citas y orientación médica,
-                con información accesible para cada paciente.
-            </p>
-            <hr>
-            </hr>
-            <h3>Visión</h3>
-
-            <p>
-                Convertirnos en una herramienta útil donde los usuarios encuentren
-                los servicios médicos necesarios y agenden sus citas de manera cómoda.
-            </p>
-            <hr>
-            </hr>
-            <h3>Preguntas frecuentes</h3>
-
-            <details>
-                <summary>¿Para qué sirve MediCitas Web?</summary>
+            <div id="mision">
+                <h3>Misión</h3>
 
                 <p>
-                    MediCitas Web sirve para gestionar citas médicas de manera rápida
-                    y organizada, permitiendo a los pacientes consultar servicios y
-                    especialistas disponibles.
+                    Brindar un servicio confiable de gestión de citas y orientación médica,
+                    con información accesible para cada paciente.
                 </p>
-            </details>
-
-            <details>
-                <summary>¿Cuál es el objetivo de la página?</summary>
-
-                <p>
-                    El objetivo principal es facilitar el acceso a información médica
-                    y permitir que los usuarios puedan reservar citas desde una
-                    plataforma sencilla.
-                </p>
-            </details>
-
-            <details>
-                <summary>¿Qué servicios ofrece la plataforma?</summary>
-
-                <p>
-                    La plataforma ofrece reserva de citas, información sobre
-                    especialidades médicas, atención al paciente y contacto con la clínica
-                </p>
-            </details>
-            <h3>Progreso de digitalización del sistema</h3>
-
-            <p>Estado actual de implementación de MediCitas Web:</p>
-
-            <progress value="85" max="100"></progress>
-            <p>85% completado</p>
+            </div>
             <hr>
-            <hr />
-            <h3>Nivel de satisfacción del sistema</h3>
 
-            <p>Basado en encuestas de usuarios:</p>
+            <div id="vision">
+                <h3>Visión</h3>
+
+                <p>
+                    Convertirnos en una herramienta útil donde los usuarios encuentren
+                    los servicios médicos necesarios y agenden sus citas de manera cómoda.
+                </p>
+            </div>
+            <hr>
+
+            <div class="faq-section">
+                <h3>Preguntas frecuentes</h3>
+
+                <details class="faq-item">
+                    <summary>¿Para qué sirve MediCitas Web?</summary>
+
+                    <p>
+                        MediCitas Web sirve para gestionar citas médicas de manera rápida
+                        y organizada, permitiendo a los pacientes consultar servicios y
+                        especialistas disponibles.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Cuál es el objetivo de la página?</summary>
+
+                    <p>
+                        El objetivo principal es facilitar el acceso a información médica
+                        y permitir que los usuarios puedan reservar citas desde una
+                        plataforma sencilla.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué servicios ofrece la plataforma?</summary>
+
+                    <p>
+                        La plataforma ofrece reserva de citas, información sobre
+                        especialidades médicas, atención al paciente y contacto con la clínica
+                    </p>
+                </details>
+            </div>
+
+            <div class="progreso-seccion">
+                <h3>Progreso de digitalización del sistema</h3>
+
+                <p>Estado actual de implementación de MediCitas Web:</p>
+
+                <div class="progreso-item">
+                    <progress value="85" max="100"></progress>
+                    <p class="porcentaje">85% completado</p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="progreso-seccion">
+                <h3>Nivel de satisfacción del sistema</h3>
+
+                <p>Basado en encuestas de usuarios:</p>
 
             <meter value="8.5" min="0" max="10" low="4" high="7" optimum="9"></meter>
 

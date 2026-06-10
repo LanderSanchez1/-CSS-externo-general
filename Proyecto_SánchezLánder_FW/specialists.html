@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MediCitas Web - Especialistas</title>
+  <link rel="icon" type="image/png" href="./images/medico.png">
   <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/specialists.css">
 </head>
 <body>
   <header>
@@ -14,13 +17,13 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Acerca de</a></li>
-        <li><a href="services.html">Servicios</a></li>
-        <li><a href="specialists.html">Especialistas</a></li>
-        <li><a href="citas.html">Citas</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-        <li class="right"><a href="login.html">Cerrar sesión</a></li>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
+       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
+        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>
@@ -29,24 +32,24 @@
       <section class="content">
           <h2>Especialistas</h2>
           <p>En MediCitas Web contamos con médicos especializados en áreas clave de atención para brindar un servicio completo y confiable.</p>
-          <hr><hr />
-          <article>
+          
+          <article class="especialista-card">
               <h3>Medicina general</h3>
               <p>Los médicos de medicina general realizan consultas de rutina, diagnósticos iniciales y seguimiento de tratamientos.</p>
           </article>
-          <hr><hr />
-          <article>
+          <hr class="separador">      
+          <article class="especialista-card">
               <h3>Pediatría</h3>
               <p>Los pediatras trabajan con los pacientes más jóvenes para apoyar el crecimiento saludable y realizar chequeos preventivos.</p>
           </article>
-          <hr><hr />
-          <article>
+          <hr class="separador">
+          <article class="especialista-card">
               <h3>Odontología</h3>
               <p>El equipo de odontología ofrece evaluaciones dentales, limpiezas y orientación para el cuidado bucal.</p>
           </article>
       </section>
 
-    <section class="content">
+    <section class="guia-seleccion">
       <h3>Cómo elegir especialista</h3>
       <p>Elige el especialista que mejor se ajuste a tu necesidad, con atención clara y personalizada en cada caso.</p>
       <ul>

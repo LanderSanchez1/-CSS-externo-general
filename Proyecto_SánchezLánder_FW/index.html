@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MediCitas Web - Inicio</title>
+  <link rel="icon" type="image/png" href="./images/inicio.png">
   <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/index.css">
   <meta name="description" content="MediCitas Web - Gestión simple de citas médicas">
 </head>
 <body>
@@ -15,30 +18,31 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Acerca de</a></li>
-        <li><a href="services.html">Servicios</a></li>
-        <li><a href="specialists.html">Especialistas</a></li>
-        <li><a href="citas.html">Citas</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-        <li class="right"><a href="login.html">Cerrar sesión</a></li>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
+       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
+        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
+    <section id="presentacion" class="hero">
       <h2>Bienvenido a MediCitas Web</h2>
-      <img src="images/doctor.svg" alt="Doctor" style="width: 140px; height: auto; display: block; margin: 10px auto;">
+      <img src="images/doctor.svg" alt="Doctor">
       <p>Bienvenido a tu sistema de cita médica. Aquí puedes conocer servicios, especialistas y horarios de atención.</p>
+      <p class="nota">Gestiona tus citas, revisa especialidades y recibe atención rápida desde una sola plataforma.</p>
     </section>
 
-    <section>
+    <section id="introduccion">
       <h3>Introducción al sistema</h3>
       <p>MediCitas Web es una plataforma para gestionar citas médicas, conocer los servicios disponibles y mantener comunicación con el equipo de atención.</p>
     </section>
 
-    <section>
+    <section id="beneficios">
       <h3>Beneficios</h3>
       <ul>
         <li>Reserva de citas rápida y organizada.</li>
@@ -49,19 +53,19 @@
 
     <section>
       <h3>Resumen de servicios</h3>
-      <article>
+      <article class="tarjeta">
         <h4>Agendar citas</h4>
-        <img src="images/icono.png" alt="Agendar citas" style="width: 60px; height: 60px; margin-bottom: 10px;">
+        <img src="images/icono.png" alt="Agendar citas">
         <p>Reserva tu cita con especialistas según tu necesidad.</p>
       </article>
-      <article>
+      <article class="tarjeta">
         <h4>Atención a pacientes</h4>
-        <img src="images/icono.png" alt="Atención a pacientes" style="width: 60px; height: 60px; margin-bottom: 10px;">
+        <img src="images/icono.png" alt="Atención a pacientes">
         <p>Consulta horarios de atención y formas de contacto.</p>
       </article>
-      <article>
+      <article class="tarjeta">
         <h4>Especialidades médicas</h4>
-        <img src="images/icono.png" alt="Especialidades" style="width: 60px; height: 60px; margin-bottom: 10px;">
+        <img src="images/icono.png" alt="Especialidades">
         <p>Descubre especialidades y médicos de la clínica.</p>
       </article>
     </section>

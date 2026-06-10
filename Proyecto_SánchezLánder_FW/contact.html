@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>MediCitas Web - Contacto</title>
+    <link rel="icon" type="image/png" href="./images/contacto.png">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <header>
@@ -15,21 +18,21 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="services.html">Servicios</a></li>
-                <li><a href="specialists.html">Especialistas</a></li>
-                <li><a href="citas.html">Citas</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li class="right"><a href="login.html">Cerrar sesión</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
+        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
+       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
+        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section id="seccion-contacto-principal">
             <h2>Contacto</h2>
-            <img src="images/icono.png" alt="Contacto" style="width: 100px; height: 100px; display: block; margin: 15px auto;">
+            <img src="images/icono.png" alt="Contacto">
 
             <p>
                 Nuestro equipo atiende tus dudas y coordina citas médicas con rapidez.
@@ -37,7 +40,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="info-contacto">
             <h3>Información de contacto</h3>
 
             <ul>
@@ -49,6 +52,14 @@
                     <a href="https://www.instagram.com/_lander_s/" target="_blank">@_lander_s</a>
                 </li>
             </ul>
+        </section>
+
+        <section class="redes-sociales">
+            <h3>Redes sociales</h3>
+            <p>Síguenos para recibir novedades sobre horarios, servicios y atención especializada.</p>
+            <a href="https://www.instagram.com/_lander_s/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="mailto:info@medicitas.ejemplo">Email directo</a>
         </section>
 
         <section>
@@ -68,6 +79,22 @@
             <p>
                 Atendemos consultas presenciales y llamamos para confirmar las citas programadas.
             </p>
+        </section>
+
+        <section id="formulario-contacto">
+            <h3>Envíanos un mensaje</h3>
+            <form action="contact.html" method="post">
+                <label for="nombre-contacto">Nombre</label>
+                <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre completo" required>
+
+                <label for="email-contacto">Correo electrónico</label>
+                <input id="email-contacto" name="email" type="email" placeholder="ejemplo@correo.com" required>
+
+                <label for="mensaje-contacto">Mensaje</label>
+                <textarea id="mensaje-contacto" name="mensaje" placeholder="Escribe tu consulta" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
         </section>
     </main>
 

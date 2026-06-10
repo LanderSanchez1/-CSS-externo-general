@@ -1,0 +1,189 @@
+/* ============================================================
+
+   BLOQUE 1: SECCIÓN DE SERVICIOS
+
+   Estilos para la presentación de servicios médicos
+   con artículos y descripciones
+
+============================================================ */
+
+.content {
+    background: white;
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid #0b5ea8;
+}
+
+.content h2,
+.content h3 {
+    color: #0b5ea8;
+    margin-bottom: 16px;
+}
+
+.content article {
+    background: linear-gradient(135deg, #f0f8ff 0%, #fafbfc 100%);
+    padding: 16px;
+    margin: 12px 0;
+    border-left: 4px solid #0d7ab7;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.content article:hover {
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.15);
+    transform: translateX(4px);
+}
+
+.content article h3 {
+    color: #0b5ea8;
+    margin-bottom: 8px;
+}
+
+.content article p {
+    color: #333;
+    line-height: 1.8;
+}
+
+.separador {
+    margin: 16px 0;
+    border-top: 2px solid #0b5ea8;
+}
+
+
+/* ============================================================
+
+   BLOQUE 2: TABLAS DE SERVICIOS
+
+   Estilos específicos para tablas que muestran información
+   de servicios, demanda y ocupación
+
+============================================================ */
+
+.tabla-servicios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tabla-servicios thead {
+    background: linear-gradient(to bottom, #0b5ea8, #0d7ab7);
+    color: white;
+}
+
+.tabla-servicios th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 3px solid #0b5ea8;
+}
+
+.tabla-servicios td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #222;
+}
+
+.tabla-servicios tbody tr:hover {
+    background: #f5fbff;
+    transition: all 0.2s ease;
+}
+
+.tabla-servicios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilos para el indicador de ocupación */
+.ocupacion {
+    font-weight: 600;
+    color: #0b5ea8;
+}
+
+.ocupacion-alta {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.ocupacion-media {
+    color: #f57c00;
+    font-weight: bold;
+}
+
+.ocupacion-baja {
+    color: #388e3c;
+    font-weight: bold;
+}
+
+/* ============================================================
+
+   BLOQUE 3: LISTA DE SERVICIOS
+
+   Estilos para listas de recomendaciones y beneficios
+
+============================================================ */
+
+.lista-servicios {
+    list-style: none;
+    padding-left: 0;
+    margin: 16px 0;
+}
+
+.lista-servicios li {
+    background: #f0f8ff;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-left: 4px solid #0b5ea8;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lista-servicios li:hover {
+    background: #e0f0ff;
+    transform: translateX(4px);
+}
+
+.lista-servicios li::before {
+    content: "→ ";
+    color: #0b5ea8;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* ============================================================
+
+   BLOQUE 4: INFORMACIÓN DESTACADA
+
+   Estilos para información importante o notas especiales
+
+============================================================ */
+
+.informacion-importante {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3e0 100%);
+    border: 2px solid #ffc107;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.informacion-importante h3 {
+    color: #e65100;
+    margin-bottom: 12px;
+}
+
+.informacion-importante p {
+    color: #333;
+}
+
+.informacion-importante ul {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.informacion-importante li {
+    margin: 8px 0;
+}

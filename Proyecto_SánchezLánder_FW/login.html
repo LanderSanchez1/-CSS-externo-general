@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>MediCitas Web - Iniciar sesión</title>
@@ -8,6 +9,7 @@
     <link rel="icon" type="image/png" href="./images/icono.png">
 
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
   <header>
@@ -18,10 +20,10 @@
   </header>
 
   <main>
-    <section style="background: white; max-width: 460px; width: 100%; margin: 20px auto; padding: 18px; border: 1px solid #e3e3e3; border-radius: 8px;">
+    <section id="form-container">
       <h2>Iniciar sesión</h2>
       <img src="images/icono.png" alt="Iniciar sesión" style="width: 80px; height: 80px; display: block; margin: 15px auto;">
-      <form action="index.html" method="get">
+      <form action="index.html" method="get" id="form-login">
         <label for="user">Usuario o correo electrónico</label>
         <input id="user" name="user" type="text" required>
 
@@ -31,7 +33,10 @@
         <button type="submit">Ingresar</button>
       </form>
 
-      <p style="text-align: center; margin-top: 16px;">¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+      <div id="enlace-alternativo">
+        <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+        <p class="enlace-ayuda"><a href="#">¿Olvidaste tu contraseña?</a></p>
+      </div>
     </section>
   </main>
 

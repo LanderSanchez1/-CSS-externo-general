@@ -1,238 +1,350 @@
 /* ============================================================
-
-   BLOQUE 1: SECCIÓN DE CONTACTO PRINCIPAL
-
-   Estilos para la presentación principal de la página
-   de contacto
-
+   BLOQUE 1: SECCIÓN DE CONTACTO PRINCIPAL (HERO)
+   Presentación principal de la página de contacto
 ============================================================ */
 
 #seccion-contacto-principal {
     background: linear-gradient(135deg, #e9f5ff 0%, #d9eef9 100%);
-    padding: 24px;
-    border-radius: 8px;
+    padding: 40px 24px;
+    border-radius: 12px;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     border: 2px solid #0b5ea8;
 }
 
 #seccion-contacto-principal h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0b5ea8;
 }
 
 #seccion-contacto-principal img {
-    max-width: 120px;
-    margin: 16px auto;
-    box-shadow: 0 4px 8px rgba(11, 94, 168, 0.15);
+    width: 140px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.15);
+    border-radius: 8px;
 }
 
 #seccion-contacto-principal p {
-    color: #222;
+    color: #333;
     line-height: 1.8;
-    font-size: 15px;
+    font-size: 1rem;
+    margin: 12px 0;
 }
 
-
 /* ============================================================
-
-   BLOQUE 2: INFORMACIÓN DE CONTACTO
-
-   Estilos para datos de contacto, teléfono, correo, etc.
-
+   BLOQUE 2: INFORMACIÓN DE CONTACTO (GRID RESPONSIVE)
+   Distribución en grid de datos de contacto
 ============================================================ */
 
 #info-contacto {
     background: white;
-    padding: 20px;
-    border: 1px solid #e3e3e3;
-    border-radius: 6px;
-    margin: 20px 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 28px;
+    border: 1px solid #dde8f4;
+    border-radius: 12px;
+    margin: 24px 0;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
 }
 
 #info-contacto h3 {
     color: #0b5ea8;
-    margin-bottom: 16px;
-    border-bottom: 2px solid #0b5ea8;
-    padding-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #dde8f4;
 }
 
 #info-contacto ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 #info-contacto li {
-    padding: 12px 0;
-    border-bottom: 1px solid #e3e3e3;
+    padding: 18px;
+    background: #f8fbff;
+    border-left: 4px solid #0b5ea8;
+    border-radius: 8px;
     margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.06);
 }
 
-#info-contacto li:last-child {
-    border-bottom: none;
+#info-contacto li:hover {
+    background: #eef5ff;
+    transform: translateX(6px);
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.12);
 }
 
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.contact-icon {
-    color: #0b5ea8;
-    font-weight: bold;
-    font-size: 16px;
-    min-width: 20px;
-}
-
-.contact-text {
-    flex: 1;
-}
-
-.contact-text strong {
+#info-contacto li strong {
     color: #0b5ea8;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
 }
 
-#info-contacto a {
+#info-contacto li a {
     color: #0b5ea8;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
-#info-contacto a:hover {
-    color: #0d7ab7;
+#info-contacto li a:hover {
+    color: #084a7c;
     text-decoration: underline;
 }
 
-
 /* ============================================================
-
-   BLOQUE 3: REDES SOCIALES
-
-   Estilos para enlaces a redes sociales y contacto directo
-
+   BLOQUE 3: REDES SOCIALES (FLEXBOX)
+   Enlaces a redes sociales distribuidos con flexbox
 ============================================================ */
 
 .redes-sociales {
     background: linear-gradient(135deg, #f0f8ff 0%, #e9f5ff 100%);
-    padding: 20px;
-    border-radius: 6px;
-    margin: 20px 0;
-    text-align: center;
-    border-left: 4px solid #0b5ea8;
+    padding: 32px 28px;
+    border-radius: 12px;
+    margin: 24px 0;
+    border: 2px solid #0b5ea8;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
 }
 
 .redes-sociales h3 {
     color: #0b5ea8;
+    font-size: 1.3rem;
     margin-bottom: 16px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.redes-sociales p {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-sociales > a {
+    display: flex;
+    justify-content: center;
 }
 
 .redes-sociales a {
-    display: inline-block;
-    padding: 10px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
     margin: 8px;
     background: white;
     border: 2px solid #0b5ea8;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #0b5ea8;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
 .redes-sociales a:hover {
     background: #0b5ea8;
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(11, 94, 168, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(11, 94, 168, 0.2);
 }
 
+/* ============================================================
+   BLOQUE 4: UBICACIÓN Y HORARIOS
+   Secciones informativas distribuidas en grid
+============================================================ */
+
+main > section:nth-of-type(4),
+main > section:nth-of-type(5) {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    border-left: 5px solid #0b5ea8;
+    margin: 24px 0;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
+}
+
+main > section:nth-of-type(4) h3,
+main > section:nth-of-type(5) h3 {
+    color: #0b5ea8;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+main > section:nth-of-type(4) p,
+main > section:nth-of-type(5) p {
+    color: #333;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+main > section:nth-of-type(4) a {
+    color: #0b5ea8;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+main > section:nth-of-type(4) a:hover {
+    color: #084a7c;
+    text-decoration: underline;
+}
 
 /* ============================================================
-
-   BLOQUE 4: FORMULARIO DE CONTACTO
-
-   Estilos específicos para formulario de contacto
-
+   BLOQUE 5: FORMULARIO DE CONTACTO MEJORADO
+   Formulario con mejor estructura y espaciado
 ============================================================ */
 
 #formulario-contacto {
     background: white;
-    padding: 20px;
-    border: 1px solid #e3e3e3;
-    border-radius: 6px;
-    margin: 20px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 32px 28px;
+    border-radius: 12px;
+    border-left: 5px solid #0b5ea8;
+    margin: 24px 0;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
 }
 
 #formulario-contacto h3 {
     color: #0b5ea8;
-    margin-bottom: 16px;
-    border-bottom: 2px solid #0b5ea8;
-    padding-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    margin-top: 0;
 }
 
 #formulario-contacto label {
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     color: #0b5ea8;
-    margin: 14px 0 6px 0;
-    font-size: 14px;
+    margin: 18px 0 8px 0;
+    font-size: 0.95rem;
 }
 
 #formulario-contacto input,
-#formulario-contacto textarea,
-#formulario-contacto select {
+#formulario-contacto textarea {
     width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Arial', 'Helvetica', sans-serif;
-    font-size: 14px;
-    color: #222;
+    padding: 14px 16px;
+    border: 1px solid #dde8f4;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #333;
     transition: all 0.3s ease;
-    margin-bottom: 4px;
+    background: #f9fbff;
 }
 
 #formulario-contacto input:focus,
-#formulario-contacto textarea:focus,
-#formulario-contacto select:focus {
+#formulario-contacto textarea:focus {
     outline: none;
     border-color: #0b5ea8;
-    box-shadow: 0 0 8px rgba(11, 94, 168, 0.2);
-    background: #fafbfc;
+    box-shadow: 0 0 0 4px rgba(11, 94, 168, 0.12);
+    background: white;
 }
 
 #formulario-contacto textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 140px;
 }
 
 #formulario-contacto button {
-    background: linear-gradient(to bottom, #0b5ea8, #084a7c);
+    background: linear-gradient(135deg, #0b5ea8, #084a7c);
     color: white;
-    padding: 14px 24px;
+    padding: 16px 28px;
     border: none;
-    border-radius: 4px;
-    font-weight: 600;
+    border-radius: 8px;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-top: 16px;
+    margin-top: 20px;
+    font-size: 0.95rem;
 }
 
 #formulario-contacto button:hover {
-    background: linear-gradient(to bottom, #084a7c, #062d56);
-    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.3);
+    background: linear-gradient(135deg, #084a7c, #062d56);
+    box-shadow: 0 8px 16px rgba(11, 94, 168, 0.3);
     transform: translateY(-2px);
 }
 
 #formulario-contacto button:active {
     transform: translateY(0);
+}
+
+/* ============================================================
+   BLOQUE 6: MEDIA QUERIES RESPONSIVE
+   Ajustes para pantallas medianas y pequeñas
+============================================================ */
+
+@media (max-width: 768px) {
+    #seccion-contacto-principal {
+        padding: 30px 18px;
+    }
+
+    #seccion-contacto-principal h2 {
+        font-size: 1.6rem;
+    }
+
+    #info-contacto {
+        padding: 20px;
+    }
+
+    #info-contacto ul {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .redes-sociales {
+        padding: 24px 20px;
+    }
+
+    main > section:nth-of-type(4),
+    main > section:nth-of-type(5),
+    #formulario-contacto {
+        padding: 20px;
+    }
+
+    #formulario-contacto h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #seccion-contacto-principal h2 {
+        font-size: 1.4rem;
+    }
+
+    #seccion-contacto-principal img {
+        width: 100px;
+    }
+
+    #info-contacto li {
+        padding: 14px;
+    }
+
+    .redes-sociales a {
+        width: 100%;
+    }
+
+    #formulario-contacto label {
+        font-size: 0.9rem;
+    }
+
+    #formulario-contacto input,
+    #formulario-contacto textarea {
+        font-size: 0.9rem;
+    }
+
+    #formulario-contacto button {
+        padding: 14px 20px;
+    }
 }

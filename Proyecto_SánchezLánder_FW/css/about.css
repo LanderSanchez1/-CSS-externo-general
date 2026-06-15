@@ -1,87 +1,112 @@
 /* ============================================================
-
-   BLOQUE 1: SECCIÓN ACERCA DE
-
-   Estilos para la página de "Acerca de" con misión, visión
-   y preguntas frecuentes
-
+   BLOQUE 1: SECCIÓN ACERCA DE MEJORADA
+   Estilos para la página de "Acerca de"
 ============================================================ */
 
 #contenido-principal {
     background: white;
-    padding: 24px;
-    border-radius: 8px;
-    border-left: 4px solid #0b5ea8;
+    padding: 28px;
+    border-radius: 12px;
+    border-left: 5px solid #0b5ea8;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
 }
+
+#contenido-principal h2 {
+    font-size: 1.8rem;
+    color: #0b5ea8;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+
+#contenido-principal p {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ============================================================
+   BLOQUE 2: MISIÓN Y VISIÓN
+   Tarjetas con información de misión y visión
+============================================================ */
 
 #mision,
 #vision {
-    background: linear-gradient(135deg, #f0f8ff 0%, #e9f5ff 100%);
-    padding: 20px;
-    margin: 16px 0;
-    border-radius: 6px;
-    border-left: 4px solid #0b5ea8;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+    border-left: 5px solid #0b5ea8;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.06);
+}
+
+#mision:hover,
+#vision:hover {
+    box-shadow: 0 6px 16px rgba(11, 94, 168, 0.12);
+    transform: translateY(-2px);
 }
 
 #mision h3,
 #vision h3 {
     color: #0b5ea8;
+    font-size: 1.2rem;
     margin-bottom: 12px;
+    margin-top: 0;
 }
 
 #mision p,
 #vision p {
-    color: #222;
+    color: #555;
     line-height: 1.8;
+    margin: 0;
 }
 
-
 /* ============================================================
-
-   BLOQUE 2: PREGUNTAS FRECUENTES
-
-   Estilos para elementos details y summary con diseño
-   personalizado y animaciones suaves
-
+   BLOQUE 3: PREGUNTAS FRECUENTES (FAQ)
+   Elementos details y summary con diseño mejorado
 ============================================================ */
 
 .faq-section {
-    margin: 24px 0;
+    margin: 28px 0;
 }
 
 .faq-section h3 {
-    margin-bottom: 16px;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
     color: #0b5ea8;
+    margin-top: 0;
 }
 
 .faq-item {
     background: white;
-    border: 1px solid #e3e3e3;
-    border-radius: 6px;
-    margin-bottom: 12px;
+    border: 1px solid #dde8f4;
+    border-radius: 10px;
+    margin-bottom: 14px;
     padding: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.06);
 }
 
 .faq-item:hover {
     border-color: #0b5ea8;
-    box-shadow: 0 4px 8px rgba(11, 94, 168, 0.1);
+    box-shadow: 0 6px 16px rgba(11, 94, 168, 0.12);
 }
 
 .faq-item summary {
-    padding: 16px;
-    background: linear-gradient(to right, #f0f8ff, #e9f5ff);
+    padding: 18px;
+    background: linear-gradient(to right, #f8fbff, #eef5ff);
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     color: #0b5ea8;
     transition: all 0.3s ease;
     user-select: none;
+    font-size: 0.95rem;
 }
 
 .faq-item summary:hover {
-    background: linear-gradient(to right, #e0f0ff, #d9eef9);
-    padding-left: 20px;
+    background: linear-gradient(to right, #eef5ff, #e0f0ff);
+    padding-left: 22px;
 }
 
 .faq-item summary::marker {
@@ -89,73 +114,91 @@
 }
 
 .faq-item[open] summary {
-    background: linear-gradient(to right, #d9eef9, #c9e7f7);
+    background: linear-gradient(to right, #e0f0ff, #d9eef9);
     border-bottom: 2px solid #0b5ea8;
 }
 
 .faq-item p {
-    padding: 12px 16px 0 16px;
-    color: #333;
+    padding: 16px 18px 18px 18px;
+    color: #555;
     line-height: 1.8;
-    font-size: 14px;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
-
 /* ============================================================
-
-   BLOQUE 3: BARRAS DE PROGRESO
-
-   Estilos para elementos progress con indicadores visuales
-
+   BLOQUE 4: BARRAS DE PROGRESO MEJORADAS
+   Secciones de progreso con mejor visualización
 ============================================================ */
 
 .progreso-seccion {
-    margin: 24px 0;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 6px;
-    border-left: 4px solid #0b5ea8;
+    margin: 28px 0;
+    background: linear-gradient(135deg, #f8fbff 0%, #f0f8ff 100%);
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 5px solid #0b5ea8;
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.06);
 }
 
 .progreso-seccion h3 {
     color: #0b5ea8;
-    margin-bottom: 16px;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    margin-top: 0;
+}
+
+.progreso-seccion p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 8px 0;
 }
 
 .progreso-item {
-    margin: 16px 0;
+    margin: 18px 0;
 }
 
 .progreso-item p {
-    margin-bottom: 8px;
-    font-weight: 500;
+    margin-bottom: 10px;
+    font-weight: 700;
     color: #0b5ea8;
+    font-size: 0.9rem;
 }
 
 .progreso-item progress {
-    height: 24px;
-    border-radius: 12px;
+    height: 26px;
+    border-radius: 13px;
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.08);
 }
 
 .porcentaje {
-    font-size: 13px;
+    font-size: 0.85rem;
     color: #666;
-    margin-top: 4px;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* Indicador de satisfacción (meter) */
+meter {
+    height: 30px;
+    border-radius: 8px;
+    margin: 16px 0;
 }
 
 /* ============================================================
-
-   BLOQUE 4: GRÁFICAS Y EVALUACIONES
-
-   Estilos para representaciones visuales de satisfacción
-
+   BLOQUE 5: GRÁFICAS Y EVALUACIONES
+   Estilos para representaciones visuales
 ============================================================ */
 
 .satisfaccion {
     display: flex;
-    gap: 8px;
-    margin: 12px 0;
+    gap: 10px;
+    margin: 16px 0;
     align-items: center;
+    padding: 14px;
+    background: #f8fbff;
+    border-radius: 8px;
+    border-left: 4px solid #0b5ea8;
 }
 
 .estrella {
@@ -164,7 +207,101 @@
 }
 
 .puntuacion {
-    font-weight: 600;
+    font-weight: 700;
     color: #0b5ea8;
-    margin-left: 8px;
+    margin-left: 10px;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   BLOQUE 6: SEPARADORES VISUALES
+   Líneas separadoras mejoradas
+============================================================ */
+
+#contenido-principal hr {
+    border: none;
+    border-top: 2px solid #dde8f4;
+    margin: 24px 0;
+    opacity: 0.7;
+}
+
+/* ============================================================
+   BLOQUE 7: MEDIA QUERIES RESPONSIVE
+   Ajustes para pantallas medianas y pequeñas
+============================================================ */
+
+@media (max-width: 768px) {
+    #contenido-principal {
+        padding: 20px;
+    }
+
+    #contenido-principal h2 {
+        font-size: 1.4rem;
+    }
+
+    #mision,
+    #vision {
+        padding: 18px;
+        margin: 16px 0;
+    }
+
+    .faq-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq-item summary {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    .progreso-seccion {
+        padding: 18px;
+    }
+
+    .progreso-seccion h3 {
+        font-size: 1rem;
+    }
+
+    .progreso-item progress {
+        height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contenido-principal h2 {
+        font-size: 1.2rem;
+    }
+
+    #mision h3,
+    #vision h3 {
+        font-size: 1rem;
+    }
+
+    .faq-item summary {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .faq-item p {
+        padding: 12px 14px 14px 14px;
+        font-size: 0.9rem;
+    }
+
+    .progreso-seccion h3 {
+        font-size: 0.95rem;
+    }
+
+    .progreso-item progress {
+        height: 18px;
+    }
+
+    .satisfaccion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .puntuacion {
+        margin-left: 0;
+    }
 }

@@ -1,175 +1,301 @@
 /* ============================================================
-
-   BLOQUE 1: PRESENTACIÓN PRINCIPAL
-
-   Estilos específicos de la página principal con secciones
-   de bienvenida, introducción y beneficios
-
+   BLOQUE 1: PRESENTACIÓN PRINCIPAL (HERO)
+   Sección de bienvenida centrada con imagen y gradiente
 ============================================================ */
 
 #presentacion {
     background: linear-gradient(135deg, #e9f5ff 0%, #d9eef9 100%);
-    padding: 24px;
-    border-radius: 8px;
+    padding: 40px 24px;
+    border-radius: 12px;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     border: 2px solid #0b5ea8;
 }
 
 #presentacion h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0b5ea8;
 }
 
 #presentacion img {
-    margin: 16px auto;
-    max-width: 160px;
-    box-shadow: 0 4px 8px rgba(11, 94, 168, 0.15);
+    width: 180px;
+    height: auto;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.15);
+    border-radius: 8px;
 }
+
+#presentacion p {
+    font-size: 1rem;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   BLOQUE 2: INTRODUCCIÓN Y CONTEXTO
+   Sección con borde lateral para destacar información
+============================================================ */
 
 #introduccion {
     background: white;
-    padding: 20px;
-    border-left: 4px solid #0d7ab7;
-    border-radius: 4px;
-    margin: 20px 0;
+    padding: 24px;
+    border-left: 5px solid #0d7ab7;
+    border-radius: 8px;
+    margin: 24px 0;
+    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
 }
 
+#introduccion h3 {
+    color: #0b5ea8;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+/* ============================================================
+   BLOQUE 3: BENEFICIOS (GRID MEJORADO)
+   Lista de beneficios distribuida en Grid responsive
+============================================================ */
+
 #beneficios {
-    margin: 20px 0;
+    margin: 24px 0;
 }
 
 #beneficios h3 {
     color: #0b5ea8;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
 }
 
 #beneficios ul {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
     padding-left: 0;
     list-style: none;
+    margin: 0;
 }
 
 #beneficios li {
-    padding: 12px 16px;
+    padding: 18px 16px;
     background: #f0f8ff;
-    border-left: 4px solid #0b5ea8;
-    border-radius: 4px;
+    border-left: 5px solid #0b5ea8;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.06);
 }
 
 #beneficios li:hover {
     background: #e0f0ff;
-    transform: translateX(4px);
+    transform: translateX(6px);
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.12);
 }
 
 #beneficios li::before {
     content: "✓ ";
     color: #0b5ea8;
     font-weight: bold;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 
 /* ============================================================
+   BLOQUE 4: SECCIÓN DE SERVICIOS CON FLEXBOX
+   Contenedor flexible para tarjetas de servicios
+============================================================ */
 
-   BLOQUE 2: TARJETAS DE SERVICIOS
+/* ============================================================
+   BLOQUE 4: SECCIÓN DE SERVICIOS
+   Estilos para la sección de resumen de servicios
+============================================================ */
 
-   Estilos reutilizables mediante clases para elementos
-   que se repiten como tarjetas y notas
+main > section:nth-of-type(3) {
+    padding: 32px 24px;
+}
 
+main > section:nth-of-type(3) h3 {
+    font-size: 1.3rem;
+    margin-bottom: 28px;
+    text-align: center;
+    color: #0b5ea8;
+}
+
+/* ============================================================
+   BLOQUE 4: CONTENEDOR DE TARJETAS CON FLEXBOX
+   Distribuye las tarjetas de servicios horizontalmente
+============================================================ */
+
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* ============================================================
+   BLOQUE 5: TARJETAS DE SERVICIOS (FLEXBOX)
+   Estilos para las tarjetas de servicios con flexbox
 ============================================================ */
 
 .tarjeta {
-    background: white;
-    padding: 16px;
-    border: 1px solid #e3e3e3;
-    border-radius: 6px;
-    margin: 12px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+    padding: 28px 20px;
+    border: 1px solid #dde8f4;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 280px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .tarjeta:hover {
-    box-shadow: 0 6px 12px rgba(11, 94, 168, 0.15);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(11, 94, 168, 0.16);
+    transform: translateY(-8px);
     border-color: #0b5ea8;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
 }
 
 .tarjeta h4 {
     color: #0b5ea8;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
+    margin: 16px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 .tarjeta p {
-    margin: 8px 0;
-    font-size: 13px;
+    margin: 12px 0 0 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
 }
 
+/* ============================================================
+   BLOQUE 6: NOTA DESTACADA
+   Estilo para notas informativas con ícono
+============================================================ */
+
 .nota {
-    background: #fff9e6;
-    padding: 12px 16px;
-    border-left: 4px solid #ffc107;
-    border-radius: 4px;
-    margin: 12px 0;
-    font-size: 13px;
+    background: #fffbf0;
+    padding: 16px 18px;
+    border-left: 5px solid #ff9800;
+    border-radius: 8px;
+    margin: 18px 0;
+    font-size: 0.95rem;
     color: #333;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.08);
 }
 
 .nota::before {
     content: "⚠ ";
     font-weight: bold;
-    margin-right: 8px;
+    margin-right: 10px;
+    color: #ff9800;
 }
 
 
 /* ============================================================
-
-   BLOQUE 3: HERO SECTION
-
-   Estilos para la sección principal con imagen de fondo
-   y contenido destacado
-
+   BLOQUE 7: HERO SECTION
+   Sección principal con imagen de fondo y contenido destacado
 ============================================================ */
 
 .hero {
     background: linear-gradient(135deg, #e9f5ff 0%, #c9e7f7 100%);
-    padding: 40px 20px;
+    padding: 50px 30px;
     text-align: center;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    border-radius: 12px;
+    margin-bottom: 32px;
 }
 
 .hero h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    font-size: 28px;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #0b5ea8;
 }
 
 .hero p {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 .destacado {
     font-weight: bold;
     color: #0b5ea8;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2px 6px;
-    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 /* ============================================================
-   BLOQUE 4: IMÁGENES DE SERVICIOS
-   Tamaño reducido para las imágenes del resumen de servicios
+   BLOQUE 8: MEDIA QUERIES RESPONSIVE
+   Ajustes para pantallas medianas y pequeñas
 ============================================================ */
 
-.tarjeta img {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 30px auto;
+@media (max-width: 768px) {
+    #presentacion {
+        padding: 30px 18px;
+    }
+
+    #presentacion h2 {
+        font-size: 1.6rem;
+    }
+
+    #beneficios ul {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .tarjeta {
+        max-width: 100%;
+        padding: 24px 16px;
+    }
+
+    .tarjetas-contenedor {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 35px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #presentacion img {
+        width: 120px;
+    }
+
+    #beneficios li {
+        padding: 14px 12px;
+        font-size: 0.9rem;
+    }
+
+    .tarjeta {
+        min-height: auto;
+    }
+
+    .tarjeta img {
+        width: 60px;
+        height: 60px;
+    }
 }

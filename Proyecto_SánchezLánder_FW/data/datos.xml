@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicitas>
+    <clinica>
+        <nombre>MediCitas Web</nombre>
+        <descripcion>Plataforma de gestión de citas médicas</descripcion>
+        <año_fundacion>2026</año_fundacion>
+        <director>Lánder Sánchez</director>
+    </clinica>
+
+    <especialidades>
+        <especialidad>
+            <id>1</id>
+            <nombre>Medicina General</nombre>
+            <descripcion>Los médicos de medicina general realizan consultas de rutina, diagnósticos iniciales y seguimiento de tratamientos.</descripcion>
+            <icono>fa-stethoscope</icono>
+            <especialistas>3</especialistas>
+            <tiempo_promedio_consulta>30 minutos</tiempo_promedio_consulta>
+            <imagen>images/medicinageneral.jpg</imagen>
+        </especialidad>
+
+        <especialidad>
+            <id>2</id>
+            <nombre>Pediatría</nombre>
+            <descripcion>Los pediatras trabajan con los pacientes más jóvenes para apoyar el crecimiento saludable y realizar chequeos preventivos.</descripcion>
+            <icono>fa-child</icono>
+            <especialistas>2</especialistas>
+            <tiempo_promedio_consulta>25 minutos</tiempo_promedio_consulta>
+            <imagen>images/pediatria.jpg</imagen>
+        </especialidad>
+
+        <especialidad>
+            <id>3</id>
+            <nombre>Odontología</nombre>
+            <descripcion>El equipo de odontología ofrece evaluaciones dentales, limpiezas y orientación para el cuidado bucal.</descripcion>
+            <icono>fa-tooth</icono>
+            <especialistas>2</especialistas>
+            <tiempo_promedio_consulta>40 minutos</tiempo_promedio_consulta>
+            <imagen>images/dentistas.png</imagen>
+        </especialidad>
+    </especialidades>
+
+    <servicios>
+        <servicio>
+            <id>1</id>
+            <nombre>Consulta General</nombre>
+            <descripcion>Evaluación inicial de síntomas y seguimiento de salud.</descripcion>
+            <precio>50.00</precio>
+            <duracion>30 minutos</duracion>
+            <disponibilidad>Lunes a viernes 8:00 AM - 6:00 PM</disponibilidad>
+            <pacientes_atendidos>Adultos y adolescentes</pacientes_atendidos>
+        </servicio>
+
+        <servicio>
+            <id>2</id>
+            <nombre>Pediatría</nombre>
+            <descripcion>Atención a niños y control del crecimiento infantil.</descripcion>
+            <precio>45.00</precio>
+            <duracion>25 minutos</duracion>
+            <disponibilidad>Lunes a viernes 9:00 AM - 5:00 PM</disponibilidad>
+            <pacientes_atendidos>Niños y adolescentes</pacientes_atendidos>
+        </servicio>
+
+        <servicio>
+            <id>3</id>
+            <nombre>Odontología</nombre>
+            <descripcion>Revisión dental, limpieza y orientación preventiva.</descripcion>
+            <precio>60.00</precio>
+            <duracion>40 minutos</duracion>
+            <disponibilidad>Lunes a sábado 8:00 AM - 7:00 PM</disponibilidad>
+            <pacientes_atendidos>Pacientes de todas las edades</pacientes_atendidos>
+        </servicio>
+    </servicios>
+
+    <medicos>
+        <medico>
+            <id>1</id>
+            <nombre>Dr. Carlos González</nombre>
+            <especialidad>Medicina General</especialidad>
+            <experiencia>15</experiencia>
+            <certificaciones>
+                <certificacion>Médico General</certificacion>
+                <certificacion>Especialista en Urgencias</certificacion>
+            </certificaciones>
+            <horario>Lunes a viernes 8:00 AM - 2:00 PM</horario>
+            <telefono>+34 911 234 567</telefono>
+        </medico>
+
+        <medico>
+            <id>2</id>
+            <nombre>Dra. María López</nombre>
+            <especialidad>Pediatría</especialidad>
+            <experiencia>12</experiencia>
+            <certificaciones>
+                <certificacion>Pediatra</certificacion>
+                <certificacion>Especialista en Crecimiento Infantil</certificacion>
+            </certificaciones>
+            <horario>Lunes a jueves 2:00 PM - 6:00 PM</horario>
+            <telefono>+34 911 234 568</telefono>
+        </medico>
+
+        <medico>
+            <id>3</id>
+            <nombre>Dr. Jorge Martínez</nombre>
+            <especialidad>Odontología</especialidad>
+            <experiencia>18</experiencia>
+            <certificaciones>
+                <certificacion>Dentista</certificacion>
+                <certificacion>Especialista en Implantes</certificacion>
+            </certificaciones>
+            <horario>Martes a sábado 9:00 AM - 5:00 PM</horario>
+            <telefono>+34 911 234 569</telefono>
+        </medico>
+    </medicos>
+
+    <citas_proximas>
+        <cita>
+            <id>1</id>
+            <paciente>Juan Pérez</paciente>
+            <especialidad>Medicina General</especialidad>
+            <medico>Dr. Carlos González</medico>
+            <fecha>2026-06-25</fecha>
+            <hora>10:30</hora>
+            <estado>confirmada</estado>
+        </cita>
+
+        <cita>
+            <id>2</id>
+            <paciente>Ana García</paciente>
+            <especialidad>Pediatría</especialidad>
+            <medico>Dra. María López</medico>
+            <fecha>2026-06-26</fecha>
+            <hora>14:00</hora>
+            <estado>confirmada</estado>
+        </cita>
+
+        <cita>
+            <id>3</id>
+            <paciente>Pedro Rodríguez</paciente>
+            <especialidad>Odontología</especialidad>
+            <medico>Dr. Jorge Martínez</medico>
+            <fecha>2026-06-27</fecha>
+            <hora>11:00</hora>
+            <estado>pendiente</estado>
+        </cita>
+    </citas_proximas>
+
+    <horarios>
+        <atencion_general>Lunes a viernes de 8:00 AM a 6:00 PM, Sábados de 9:00 AM a 2:00 PM</atencion_general>
+        <cierre>Domingos y festivos</cierre>
+        <telefono_general>+34 911 234 560</telefono_general>
+        <email>info@medicitas.com</email>
+    </horarios>
+</medicitas>

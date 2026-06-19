@@ -1,82 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MediCitas Web - Inicio</title>
   <link rel="icon" type="image/png" href="./images/inicio.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/index.css">
+
   <meta name="description" content="MediCitas Web - Gestión simple de citas médicas">
 </head>
+
 <body>
-  <header>
-    <div class="header-inner">
-      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
-      <h1>MediCitas Web</h1>
+  <!-- Navbar con Bootstrap -->
+<!-- Navbar con Bootstrap (Completamente Centrada) -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container d-flex flex-column align-items-center">
+      
+      <!-- Contenedor para el Logo / Marca en el Centro -->
+      <div class="w-100 d-flex justify-content-center mb-2">
+        <a class="navbar-brand d-flex align-items-center fw-bold mx-auto" href="index.html" style="color: #0b5ea8 !important;">
+          <img src="images/logo.svg" alt="Logo MediCitas" class="logo me-2" style="height: 40px;">
+          <span class="fs-4" style="color: #0b5ea8 !important; opacity: 1 !important;">MediCitas Web</span>
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa para Móviles -->
+      <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación centrados -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav text-center">
+  <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-house me-1"></i> Inicio</a></li>
+  <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-circle-info me-1"></i> Acerca de</a></li>
+  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-stethoscope me-1"></i> Servicios</a></li>
+  <li class="nav-item"><a class="nav-link" href="specialists.html"><i class="fas fa-user-doctor me-1"></i> Especialistas</a></li>
+  <li class="nav-item"><a class="nav-link" href="citas.html"><i class="fas fa-calendar-plus me-1"></i> Citas</a></li>
+  <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contacto</a></li>
+  <li class="nav-item"><a class="nav-link ms-lg-2" href="login.html"><i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión</a></li>
+</ul>
+      </div>
+      
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
-        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
-       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
-        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
-        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
-      </ul>
-    </nav>
-  </header>
+  </nav>
 
   <main>
-    <section id="presentacion" class="hero">
-      <h2>Bienvenido a MediCitas Web</h2>
-      <img src="images/doctor.svg" alt="Doctor">
-      <p>Bienvenido a tu sistema de cita médica. Aquí puedes conocer servicios, especialistas y horarios de atención.</p>
-      <p class="nota">Gestiona tus citas, revisa especialidades y recibe atención rápida desde una sola plataforma.</p>
+    <!-- Hero Section -->
+    <section class="hero-section mb-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 mb-4">Bienvenido a MediCitas Web</h1>
+            <p class="lead mb-4">Tu plataforma moderna de gestión de citas médicas. Reserva, consulta horarios y conecta
+              con especialistas de confianza.</p>
+            <p class="text-muted mb-4">Gestiona tus citas, revisa especialidades y recibe atención rápida desde una sola
+              plataforma.</p>
+            <a href="citas.html" class="btn btn-primary btn-lg me-3">
+              <i class="fas fa-calendar-check me-2"></i> Agendar Cita
+            </a>
+            <a href="services.html" class="btn btn-outline-primary btn-lg">
+              <i class="fas fa-info-circle me-2"></i> Conocer Servicios
+            </a>
+          </div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <img src="images/doctor.svg" alt="Doctor" class="img-fluid w-100" style="max-width: 400px;">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="introduccion">
-      <h3>Introducción al sistema</h3>
-      <p>MediCitas Web es una plataforma para gestionar citas médicas, conocer los servicios disponibles y mantener comunicación con el equipo de atención.</p>
+    <!-- Introducción -->
+    <section class="py-5 bg-light rounded-lg mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="mb-4"><i class="fas fa-hospital-user text-primary me-3"></i>Introducción al Sistema</h2>
+            <p class="fs-5">MediCitas Web es una plataforma moderna diseñada para gestionar citas médicas, conocer los
+              servicios disponibles y mantener comunicación directa con el equipo de atención de la clínica.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="beneficios">
-      <h3>Beneficios</h3>
-      <ul>
-        <li>Reserva de citas rápida y organizada.</li>
-        <li>Acceso a información de especialidades y médicos.</li>
-        <li>Horario de atención claro y contacto directo.</li>
-      </ul>
+    <!-- Beneficios con Grid -->
+    <section class="py-5 mb-5">
+      <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-star text-primary me-3"></i>Beneficios Principales</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card p-4 h-100">
+              <i class="fas fa-check-circle text-primary display-4 mb-3"></i>
+              <h3 class="h5 text-primary mb-2">Reserva Rápida</h3>
+              <p>Reserva tu cita con especialistas según tu necesidad en solo unos clics.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card p-4 h-100">
+              <i class="fas fa-info-circle text-primary display-4 mb-3"></i>
+              <h3 class="h5 text-primary mb-2">Información Clara</h3>
+              <p>Acceso a información de especialidades, médicos y horarios de atención disponibles.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="benefit-card p-4 h-100">
+              <i class="fas fa-headset text-primary display-4 mb-3"></i>
+              <h3 class="h5 text-primary mb-2">Soporte Continuo</h3>
+              <p>Horario de atención claro y contacto directo con nuestro equipo de soporte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h3>Resumen de servicios</h3>
-      <div class="tarjetas-contenedor">
-        <article class="tarjeta">
-          <h4>Agendar citas</h4>
-          <img src="images/icono.png" alt="Agendar citas">
-          <p>Reserva tu cita con especialistas según tu necesidad.</p>
-        </article>
-        <article class="tarjeta">
-          <h4>Atención a pacientes</h4>
-          <img src="images/icono.png" alt="Atención a pacientes">
-          <p>Consulta horarios de atención y formas de contacto.</p>
-        </article>
-        <article class="tarjeta">
-          <h4>Especialidades médicas</h4>
-          <img src="images/icono.png" alt="Especialidades">
-          <p>Descubre especialidades y médicos de la clínica.</p>
-        </article>
+    <!-- Resumen de Servicios con Cards Bootstrap -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-briefcase-medical text-primary me-3"></i>Nuestros Servicios</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-hover">
+              <div class="card-body text-center">
+                <i class="fas fa-calendar-check display-4 text-primary mb-3"></i>
+                <h4 class="card-title">Agendar Citas</h4>
+                <p class="card-text">Reserva tu cita con especialistas según tu necesidad y disponibilidad.</p>
+                <a href="citas.html" class="btn btn-primary btn-sm">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-hover">
+              <div class="card-body text-center">
+                <!-- Icono de Atención al Paciente Restaurado -->
+                <i class="fas fa-headset display-4 text-primary mb-3"></i>
+                <h4 class="card-title">Atención a Pacientes</h4>
+                <p class="card-text">Consulta horarios de atención y formas de contacto con nuestro equipo.</p>
+                <a href="contact.html" class="btn btn-primary btn-sm">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-hover">
+              <div class="card-body text-center">
+                <i class="fas fa-stethoscope display-4 text-primary mb-3"></i>
+                <h4 class="card-title">Especialidades</h4>
+                <p class="card-text">Descubre especialidades y médicos especializados de la clínica.</p>
+                <a href="specialists.html" class="btn btn-primary btn-sm">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-primary py-5 rounded-lg mt-5">
+      <div class="container text-center">
+        <h2 class="mb-4">¿Listo para agendar tu cita?</h2>
+        <p class="fs-5 mb-4">Accede a nuestro sistema y reserva tu consulta médica de manera fácil y segura.</p>
+        <a href="citas.html" class="btn btn-light btn-lg">
+          <i class="fas fa-arrow-right me-2"></i> Agendar Ahora
+        </a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>2026 MediCitas Web — Lánder Sánchez</p>
+  <footer class="bg-light border-top mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0"><strong>MediCitas Web</strong> - Gestión de Citas Médicas</p>
+          <p class="text-muted small">© 2026 Proyecto de Lánder Sánchez</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted small">
+            <i class="fas fa-phone me-1"></i> +593 2 123 4567 |
+            <i class="fas fa-envelope me-1"></i> info@medicitas.com
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-

@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MediCitas Web - Citas</title>
-    <link rel="icon" type="image/png" href="./images/citas.png">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/citas.css">
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
-      <h1>MediCitas Web</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
-        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
-       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
-        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
-        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
-      </ul>
-    </nav>
-  </header>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCitas Web - Citas</title>
+<link rel="icon" type="image/png" href="./images/citas.png">
 
-  <main>
+<!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/citas.css">
+</head>
+
+<body>
+  <!-- Navbar con Bootstrap -->
+  <!-- Navbar con Bootstrap (Completamente Centrada) -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container d-flex flex-column align-items-center">
+      
+      <!-- Contenedor para el Logo / Marca en el Centro -->
+      <div class="w-100 d-flex justify-content-center mb-2">
+        <a class="navbar-brand d-flex align-items-center fw-bold mx-auto" href="index.html" style="color: #0b5ea8 !important;">
+          <img src="images/logo.svg" alt="Logo MediCitas" class="logo me-2" style="height: 40px;">
+          <span class="fs-4" style="color: #0b5ea8 !important; opacity: 1 !important;">MediCitas Web</span>
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa para Móviles -->
+      <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación centrados -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav text-center">
+  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-house me-1"></i> Inicio</a></li>
+  <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-circle-info me-1"></i> Acerca de</a></li>
+  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-stethoscope me-1"></i> Servicios</a></li>
+  <li class="nav-item"><a class="nav-link" href="specialists.html"><i class="fas fa-user-doctor me-1"></i> Especialistas</a></li>
+  <li class="nav-item"><a class="nav-link active" href="citas.html"><i class="fas fa-calendar-plus me-1"></i> Citas</a></li>
+  <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contacto</a></li>
+  <li class="nav-item"><a class="nav-link ms-lg-2" href="login.html"><i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión</a></li>
+</ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <main class="py-5">
     <section>
       <h2>Agendar cita médica</h2>
       <img src="images/doctor.svg" alt="Agendar cita">
@@ -37,51 +59,52 @@
     </section>
 
     <section id="formulario-citas">
-        <form action="citas.html" method="get" id="form-agendar">
-            <label for="nombre">Nombre completo</label>
-            <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Pérez" required>
+      <form action="citas.html" method="get" id="form-agendar">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Pérez" required>
 
-            <label for="email">Correo electrónico</label>
-            <input id="email" name="email" type="email" placeholder="ejemplo@correo.com" required>
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" placeholder="ejemplo@correo.com" required>
 
-            <label for="especialidad">Especialidad</label>
-            <select id="especialidad" name="especialidad" required>
-                <option value="">Seleccione una especialidad</option>
-                <option value="medicina_general">Medicina general</option>
-                <option value="pediatria">Pediatría</option>
-                <option value="odontologia">Odontología</option>
-            </select>
+        <label for="especialidad">Especialidad</label>
+        <select id="especialidad" name="especialidad" required>
+          <option value="">Seleccione una especialidad</option>
+          <option value="medicina_general">Medicina general</option>
+          <option value="pediatria">Pediatría</option>
+          <option value="odontologia">Odontología</option>
+        </select>
 
-            <label>Tipo de consulta</label>
-            <div class="tipo-consulta">
-                <label>
-                    <input type="radio" name="tipo" value="presencial" checked> Presencial
-                </label>
-                <label>
-                    <input type="radio" name="tipo" value="virtual"> Virtual
-                </label>
-            </div>
-
-            <label for="fecha">Fecha</label>
-            <input id="fecha" name="fecha" type="date" required>
-
-            <label for="hora">Hora</label>
-            <input id="hora" name="hora" type="time" required>
-
-            <label for="notas">Notas adicionales</label>
-            <textarea id="notas" name="notas" rows="4" placeholder="Ingrese síntomas o comentarios"></textarea>
-
-            <button type="submit" id="btn-agendar-cita">Agendar cita</button>
-        </form>
-
-        <div class="imagen-formulario">
-            <img src="images/doctorr.png" alt="Formulario de citas médicas">
+        <label>Tipo de consulta</label>
+        <div class="tipo-consulta">
+          <label>
+            <input type="radio" name="tipo" value="presencial" checked> Presencial
+          </label>
+          <label>
+            <input type="radio" name="tipo" value="virtual"> Virtual
+          </label>
         </div>
+
+        <label for="fecha">Fecha</label>
+        <input id="fecha" name="fecha" type="date" required>
+
+        <label for="hora">Hora</label>
+        <input id="hora" name="hora" type="time" required>
+
+        <label for="notas">Notas adicionales</label>
+        <textarea id="notas" name="notas" rows="4" placeholder="Ingrese síntomas o comentarios"></textarea>
+
+        <button type="submit" id="btn-agendar-cita">Agendar cita</button>
+      </form>
+
+      <div class="imagen-formulario">
+        <img src="images/doctorr.png" alt="Formulario de citas médicas">
+      </div>
     </section>
 
     <section id="info-importante">
       <h3>Información importante</h3>
-      <p>Por favor, revise todos los datos antes de enviar el formulario. Una vez confirmada su cita, recibirá una notificación por correo electrónico.</p>
+      <p>Por favor, revise todos los datos antes de enviar el formulario. Una vez confirmada su cita, recibirá una
+        notificación por correo electrónico.</p>
       <ul>
         <li>Confirme su especialidad médica.</li>
         <li>Seleccione la fecha y hora disponible.</li>
@@ -90,10 +113,25 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 MediCitas Web</p>
+  <footer class="bg-light border-top mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0"><strong>MediCitas Web</strong> - Gestión de Citas Médicas</p>
+          <p class="text-muted small">© 2026 Proyecto de Lánder Sánchez</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted small">
+            <i class="fas fa-phone me-1"></i> +593 2 123 4567 |
+            <i class="fas fa-envelope me-1"></i> info@medicitas.com
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-

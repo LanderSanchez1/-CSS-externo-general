@@ -1,0 +1,130 @@
+{
+  "clinica": {
+    "nombre": "MediCitas Web",
+    "descripcion": "Plataforma de gestión de citas médicas",
+    "año_fundacion": 2026,
+    "director": "Lánder Sánchez"
+  },
+  "especialidades": [
+    {
+      "id": 1,
+      "nombre": "Medicina General",
+      "descripcion": "Los médicos de medicina general realizan consultas de rutina, diagnósticos iniciales y seguimiento de tratamientos.",
+      "icono": "fa-stethoscope",
+      "especialistas": 3,
+      "tiempo_promedio_consulta": "30 minutos",
+      "imagen": "images/medicinageneral.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Pediatría",
+      "descripcion": "Los pediatras trabajan con los pacientes más jóvenes para apoyar el crecimiento saludable y realizar chequeos preventivos.",
+      "icono": "fa-child",
+      "especialistas": 2,
+      "tiempo_promedio_consulta": "25 minutos",
+      "imagen": "images/pediatria.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Odontología",
+      "descripcion": "El equipo de odontología ofrece evaluaciones dentales, limpiezas y orientación para el cuidado bucal.",
+      "icono": "fa-tooth",
+      "especialistas": 2,
+      "tiempo_promedio_consulta": "40 minutos",
+      "imagen": "images/dentistas.png"
+    }
+  ],
+  "servicios": [
+    {
+      "id": 1,
+      "nombre": "Consulta General",
+      "descripcion": "Evaluación inicial de síntomas y seguimiento de salud.",
+      "precio": 50.00,
+      "duracion": "30 minutos",
+      "disponibilidad": "Lunes a viernes 8:00 AM - 6:00 PM",
+      "pacientes_atendidos": "Adultos y adolescentes"
+    },
+    {
+      "id": 2,
+      "nombre": "Pediatría",
+      "descripcion": "Atención a niños y control del crecimiento infantil.",
+      "precio": 45.00,
+      "duracion": "25 minutos",
+      "disponibilidad": "Lunes a viernes 9:00 AM - 5:00 PM",
+      "pacientes_atendidos": "Niños y adolescentes"
+    },
+    {
+      "id": 3,
+      "nombre": "Odontología",
+      "descripcion": "Revisión dental, limpieza y orientación preventiva.",
+      "precio": 60.00,
+      "duracion": "40 minutos",
+      "disponibilidad": "Lunes a sábado 8:00 AM - 7:00 PM",
+      "pacientes_atendidos": "Pacientes de todas las edades"
+    }
+  ],
+  "medicos": [
+    {
+      "id": 1,
+      "nombre": "Dr. Carlos González",
+      "especialidad": "Medicina General",
+      "experiencia": 15,
+      "certificaciones": ["Médico General", "Especialista en Urgencias"],
+      "horario": "Lunes a viernes 8:00 AM - 2:00 PM",
+      "telefono": "+34 911 234 567"
+    },
+    {
+      "id": 2,
+      "nombre": "Dra. María López",
+      "especialidad": "Pediatría",
+      "experiencia": 12,
+      "certificaciones": ["Pediatra", "Especialista en Crecimiento Infantil"],
+      "horario": "Lunes a jueves 2:00 PM - 6:00 PM",
+      "telefono": "+34 911 234 568"
+    },
+    {
+      "id": 3,
+      "nombre": "Dr. Jorge Martínez",
+      "especialidad": "Odontología",
+      "experiencia": 18,
+      "certificaciones": ["Dentista", "Especialista en Implantes"],
+      "horario": "Martes a sábado 9:00 AM - 5:00 PM",
+      "telefono": "+34 911 234 569"
+    }
+  ],
+  "citas_proximas": [
+    {
+      "id": 1,
+      "paciente": "Juan Pérez",
+      "especialidad": "Medicina General",
+      "medico": "Dr. Carlos González",
+      "fecha": "2026-06-25",
+      "hora": "10:30",
+      "estado": "confirmada"
+    },
+    {
+      "id": 2,
+      "paciente": "Ana García",
+      "especialidad": "Pediatría",
+      "medico": "Dra. María López",
+      "fecha": "2026-06-26",
+      "hora": "14:00",
+      "estado": "confirmada"
+    },
+    {
+      "id": 3,
+      "paciente": "Pedro Rodríguez",
+      "especialidad": "Odontología",
+      "medico": "Dr. Jorge Martínez",
+      "fecha": "2026-06-27",
+      "hora": "11:00",
+      "estado": "pendiente"
+    }
+  ],
+  "horarios": {
+    "atencion_general": "Lunes a viernes de 8:00 AM a 6:00 PM, Sábados de 9:00 AM a 2:00 PM",
+    "cierre": "Domingos y festivos",
+    "telefono_general": "+34 911 234 560",
+    "email": "info@medicitas.com"
+  }
+}

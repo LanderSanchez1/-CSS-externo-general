@@ -20,10 +20,17 @@
     background-color: #f5f8fb;
     --primary: #0b5ea8;
     --primary-dark: #084a7c;
+    --secondary: #00a4cc;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
     --surface: #ffffff;
     --surface-muted: #f0f5fb;
     --border: #dbe4ef;
     --shadow: 0 10px 24px rgba(11, 94, 168, 0.08);
+    --shadow-lg: 0 20px 40px rgba(11, 94, 168, 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *, *::before, *::after {
@@ -460,6 +467,356 @@ footer {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* ============================================================
+   BLOQUE 14: PERSONALIZACIÓN DE BOOTSTRAP
+   Estilos para componentes de Bootstrap
+============================================================ */
+
+.navbar-light {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    box-shadow: var(--shadow);
+}
+
+.navbar-light .navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 8px;
+    transition: var(--transition);
+    border-radius: 8px;
+    padding: 8px 12px !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.card-title {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    box-shadow: 0 8px 20px rgba(11, 94, 168, 0.3);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #063a5a 100%) !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.badge-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgba(11, 94, 168, 0.7);
+    transition: var(--transition);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: var(--primary);
+}
+
+.accordion-button {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f5ff 100%);
+    color: var(--primary-dark);
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+.accordion-button:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(11, 94, 168, 0.15);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border: none;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-title {
+    color: white;
+    font-weight: 700;
+}
+
+.alert-primary {
+    background: linear-gradient(135deg, #e8f5ff 0%, #f0f8ff 100%);
+    border: 2px solid var(--primary);
+    color: var(--primary-dark);
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #e2f5de 100%);
+    border: 2px solid var(--success);
+    color: #155724;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #fffadb 100%);
+    border: 2px solid var(--warning);
+    color: #856404;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #fde5e7 100%);
+    border: 2px solid var(--danger);
+    color: #721c24;
+}
+
+.pagination .page-link {
+    color: var(--primary);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.pagination .page-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.pagination .page-link.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 12px 0;
+}
+
+.breadcrumb-item.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(11, 94, 168, 0.15);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-check-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(11, 94, 168, 0.15);
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f5ff 100%);
+    color: var(--primary-dark);
+}
+
+.offcanvas {
+    box-shadow: var(--shadow-lg);
+}
+
+.offcanvas-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.offcanvas-title {
+    color: white;
+    font-weight: 700;
+}
+
+.table {
+    background: var(--surface);
+    transition: var(--transition);
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #eef6ff 0%, #e8f4ff 100%);
+    color: var(--primary);
+    font-weight: 700;
+    border: none;
+}
+
+.table tbody tr:hover {
+    background: #f9fbff;
+    transform: scale(1.01);
+}
+
+.badge-success {
+    background: var(--success);
+}
+
+.badge-warning {
+    background: var(--warning);
+}
+
+.badge-danger {
+    background: var(--danger);
+}
+
+/* ============================================================
+   BLOQUE 15: UTILIDADES AVANZADAS
+   Clases utilitarias adicionales
+============================================================ */
+
+.shadow-hover {
+    transition: var(--transition);
+}
+
+.shadow-hover:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.gradient-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, var(--secondary) 0%, #0088aa 100%);
+    color: white;
+}
+
+.text-primary-dark {
+    color: var(--primary-dark);
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.scale-on-hover {
+    transition: var(--transition);
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.03);
+}
+
+/* ============================================================
+   BLOQUE 16: ANIMACIONES
+   Keyframes y animaciones personalizadas
+============================================================ */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.6s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

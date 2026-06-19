@@ -1,239 +1,333 @@
 /* ============================================================
-   BLOQUE 1: ENCABEZADO Y CONTENIDO PRINCIPAL
-   Sección introductoria de la página de especialistas
+   SPECIALISTS.CSS - PÁGINA DE ESPECIALISTAS
+   Estilos específicos para la página de especialistas
 ============================================================ */
 
-.content {
-    background: white;
-    padding: 28px;
-    margin: 20px 0;
-    border-radius: 12px;
-    border-left: 5px solid #0b5ea8;
-    box-shadow: 0 2px 8px rgba(11, 94, 168, 0.08);
+/* ============================================================
+   BLOQUE 1: ENCABEZADO DE PÁGINA
+   Estilos para el título y descripción inicial
+============================================================ */
+
+main > section:first-child {
+    background: linear-gradient(135deg, #e9f5ff 0%, #f0f8ff 100%);
+    border-radius: 16px;
 }
 
-.content h2 {
-    color: #0b5ea8;
-    font-size: 1.8rem;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
+main > section:first-child h1 {
+    color: var(--primary);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.content p {
-    color: #333;
-    line-height: 1.8;
-    font-size: 1rem;
+main > section:first-child .lead {
+    color: #555;
+    font-weight: 500;
 }
 
 /* ============================================================
-   BLOQUE 2: TARJETAS DE ESPECIALIDADES (GRID)
-   Distribución en grid de las tarjetas de especialidades
+   BLOQUE 2: CARRUSEL PERSONALIZADO
+   Estilos para el carrusel de especialidades
 ============================================================ */
 
-.especialidades-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin: 20px 0;
+.carousel-item {
+    padding: 30px 0;
+    min-height: 400px;
 }
 
-.especialista-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-    border: 1px solid #dde8f4;
+/* Aplica el flexbox únicamente a la diapositiva activa o en transición */
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: flex !important;
+    align-items: center;
+}
+
+/* Fuerza a todas las imágenes a tener la misma altura y comportamiento */
+.carousel-item img {
     border-radius: 12px;
-    padding: 28px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.08);
+    box-shadow: 0 10px 30px rgba(11, 94, 168, 0.15);
+    transition: var(--transition);
+    
+    width: 100%;
+    height: 350px;          /* Ajusta esta altura si prefieres que sean más altas o bajas */
+    object-fit: cover;      /* Recorta la imagen proporcionalmente para que llene el espacio sin deformarse */
+    object-position: center; /* Centra el enfoque del recorte */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(11, 94, 168, 0.25);
+}
+
+.carousel-item h3 {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-item p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.carousel-item ul {
+    margin: 1.5rem 0;
+}
+
+.carousel-item li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+}
+
+.carousel-indicators .active {
+    background: var(--primary-dark);
+    box-shadow: 0 0 0 3px rgba(11, 94, 168, 0.3);
+}
+
+/* ============================================================
+   BLOQUE 3: TARJETAS DE ESPECIALISTAS
+   Estilos para las tarjetas con iconos y información
+============================================================ */
+
+.specialist-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: none;
+    transition: var(--transition);
+}
+
+.specialist-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.specialist-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 12px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: var(--transition);
 }
 
-.especialista-card:hover {
-    border-color: #0b5ea8;
-    box-shadow: 0 12px 28px rgba(11, 94, 168, 0.16);
+.specialist-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.specialist-card:hover .specialist-icon {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 10px 25px rgba(11, 94, 168, 0.2);
+}
+
+.specialist-card:hover {
+    box-shadow: 0 15px 40px rgba(11, 94, 168, 0.15);
     transform: translateY(-8px);
-    background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
 }
 
-.especialista-card h3 {
-    color: #0b5ea8;
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    margin-top: 0;
+.specialist-card .card-title {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
-.especialista-card p {
+.specialist-card .card-text {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
-    margin: 8px 0;
-    flex-grow: 1;
 }
 
-.especialista-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 16px;
-}
-
-.separador {
-    margin: 20px 0;
-    border-top: 2px solid #dde8f4;
-    opacity: 0.6;
+.specialist-info {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 1rem;
 }
 
 /* ============================================================
-   BLOQUE 3: GUÍA DE SELECCIÓN
-   Sección con instrucciones para elegir especialista
+   BLOQUE 4: ACORDEÓN PERSONALIZADO
+   Estilos para el acordeón de preguntas frecuentes
 ============================================================ */
 
-.guia-seleccion {
-    background: linear-gradient(135deg, #f0f8ff 0%, #e9f5ff 100%);
-    padding: 32px 28px;
-    border-radius: 12px;
-    margin: 24px 0;
-    border: 2px solid #0b5ea8;
-    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.1);
-}
-
-.guia-seleccion h3 {
-    color: #0b5ea8;
-    font-size: 1.3rem;
-    margin-bottom: 16px;
-    margin-top: 0;
-}
-
-.guia-seleccion p {
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.8;
-    font-size: 1rem;
-}
-
-.guia-seleccion ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 14px;
-}
-
-.guia-seleccion li {
-    background: white;
-    padding: 16px 18px;
-    border-left: 5px solid #0b5ea8;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(11, 94, 168, 0.06);
-}
-
-.guia-seleccion li:hover {
-    background: #f9fcfe;
-    transform: translateX(6px);
-    box-shadow: 0 4px 12px rgba(11, 94, 168, 0.12);
-}
-
-.guia-seleccion li::before {
-    content: "✓ ";
-    color: #0b5ea8;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-/* ============================================================
-   BLOQUE 4: INFORMACIÓN ADICIONAL DEL ESPECIALISTA
-   Metadata y datos de especialista
-============================================================ */
-
-.especialista-info {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #dde8f4;
-}
-
-.btn-agendar {
-    background: linear-gradient(135deg, #0b5ea8, #084a7c);
-    color: white;
-    padding: 14px 24px;
+.accordion {
     border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 16px;
-    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.btn-agendar:hover {
-    background: linear-gradient(135deg, #084a7c, #062d56);
-    box-shadow: 0 8px 16px rgba(11, 94, 168, 0.3);
-    transform: translateY(-2px);
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: white;
 }
 
-.btn-agendar:active {
-    transform: translateY(0);
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-button {
+    padding: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: white;
+    transition: var(--transition);
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f5ff 100%);
+    color: var(--primary-dark);
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(11, 94, 168, 0.15);
+    border-color: var(--primary);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%230b5ea8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.8;
+}
+
+.accordion-body ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.accordion-body li {
+    margin: 0.5rem 0;
+    color: #555;
 }
 
 /* ============================================================
-   BLOQUE 5: MEDIA QUERIES RESPONSIVE
-   Ajustes para pantallas medianas y pequeñas
+   BLOQUE 5: FONDO CLARO
+   Estilos para secciones con fondo gris claro
 ============================================================ */
+
+.bg-light {
+    background: #f8f9fa !important;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bg-light h2 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ============================================================
+   BLOQUE 6: GRID RESPONSIVE
+   Media queries para diferentes tamaños
+============================================================ */
+
+@media (max-width: 992px) {
+    .carousel-item {
+        min-height: 350px;
+    }
+
+    .carousel-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .specialist-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .specialist-icon i {
+        font-size: 2rem;
+    }
+}
 
 @media (max-width: 768px) {
-    .content {
-        padding: 20px;
+    .carousel-item {
+        min-height: auto;
+        padding: 20px 0;
     }
 
-    .content h2 {
-        font-size: 1.4rem;
+    .carousel-item h3 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
     }
 
-    .especialidades-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+    .carousel-item .row {
+        flex-direction: column;
     }
 
-    .especialista-card {
-        padding: 20px;
+    .carousel-item img {
+        margin-bottom: 1.5rem;
+        max-height: 250px;
+        object-fit: cover;
     }
 
-    .guia-seleccion {
-        padding: 24px 20px;
+    .specialist-card {
+        text-align: center;
     }
 
-    .guia-seleccion ul {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .accordion-button {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .accordion-body {
+        padding: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .content h2 {
-        font-size: 1.2rem;
+    main > section:first-child h1 {
+        font-size: 1.5rem;
     }
 
-    .especialista-card h3 {
-        font-size: 1.1rem;
+    main > section:first-child .lead {
+        font-size: 1rem;
     }
 
-    .especialista-card {
-        padding: 16px;
+    .carousel-item {
+        padding: 15px 0;
     }
 
-    .guia-seleccion {
-        padding: 18px;
+    .carousel-item h3 {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
     }
 
-    .btn-agendar {
-        width: 100%;
-        text-align: center;
+    .specialist-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .specialist-icon i {
+        font-size: 1.5rem;
+    }
+
+    .accordion-button::after {
+        width: 1rem;
     }
 }

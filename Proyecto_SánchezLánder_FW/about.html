@@ -1,130 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MediCitas Web - Acerca de</title>
-    <link rel="icon" type="image/png" href="./images/informacion.png">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/about.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCitas Web - Acerca de</title>
+  <link rel="icon" type="image/png" href="./images/informacion.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
+  <!-- Navbar con Bootstrap -->
+  <!-- Navbar con Bootstrap (Completamente Centrada) -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container d-flex flex-column align-items-center">
+      
+      <!-- Contenedor para el Logo / Marca en el Centro -->
+      <div class="w-100 d-flex justify-content-center mb-2">
+        <a class="navbar-brand d-flex align-items-center fw-bold mx-auto" href="index.html" style="color: #0b5ea8 !important;">
+          <img src="images/logo.svg" alt="Logo MediCitas" class="logo me-2" style="height: 40px;">
+          <span class="fs-4" style="color: #0b5ea8 !important; opacity: 1 !important;">MediCitas Web</span>
+        </a>
+      </div>
 
-    <header>
-        <div class="header-inner">
-            <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
-            <h1>MediCitas Web</h1>
+      <!-- Botón Hamburguesa para Móviles -->
+      <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación centrados -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+       <ul class="navbar-nav text-center">
+  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-house me-1"></i> Inicio</a></li>
+  <li class="nav-item"><a class="nav-link active" href="about.html"><i class="fas fa-circle-info me-1"></i> Acerca de</a></li>
+  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-stethoscope me-1"></i> Servicios</a></li>
+  <li class="nav-item"><a class="nav-link" href="specialists.html"><i class="fas fa-user-doctor me-1"></i> Especialistas</a></li>
+  <li class="nav-item"><a class="nav-link" href="citas.html"><i class="fas fa-calendar-plus me-1"></i> Citas</a></li>
+  <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contacto</a></li>
+  <li class="nav-item"><a class="nav-link ms-lg-2" href="login.html"><i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión</a></li>
+</ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <!-- Encabezado -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center">
+          <h1 class="display-5 mb-4"><i class="fas fa-info-circle text-primary me-2"></i>Sobre MediCitas Web</h1>
+          <p class="lead text-muted">Conoce nuestra misión, visión y valores como plataforma de servicios de salud</p>
         </div>
+      </div>
+    </section>
 
-        <nav>
-            <ul>
-               <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
-        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
-       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
-        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
-        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-
-        <section id="contenido-principal">
-
-            <h2>Sobre MediCitas Web</h2>
-
-            <p>
-                MediCitas Web es una plataforma diseñada para gestionar citas médicas
-                y facilitar el acceso a servicios de salud. Nuestra meta es ofrecer
-                una experiencia clara, rápida y ordenada para el paciente.
+    <!-- Contenido principal -->
+    <section class="py-4 mb-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8 mx-auto">
+            <p class="fs-5">
+              MediCitas Web es una plataforma moderna diseñada para gestionar citas médicas
+              y facilitar el acceso a servicios de salud. Nuestra meta es ofrecer
+              una experiencia clara, rápida y ordenada para el paciente.
             </p>
 
-            <div id="mision">
-                <h3>Misión</h3>
-
-                <p>
-                    Brindar un servicio confiable de gestión de citas y orientación médica,
-                    con información accesible para cada paciente.
-                </p>
-            </div>
-            <hr>
-
-            <div id="vision">
-                <h3>Visión</h3>
-
-                <p>
-                    Convertirnos en una herramienta útil donde los usuarios encuentren
-                    los servicios médicos necesarios y agenden sus citas de manera cómoda.
-                </p>
-            </div>
-            <hr>
-
-            <div class="faq-section">
-                <h3>Preguntas frecuentes</h3>
-
-                <details class="faq-item">
-                    <summary>¿Para qué sirve MediCitas Web?</summary>
-
-                    <p>
-                        MediCitas Web sirve para gestionar citas médicas de manera rápida
-                        y organizada, permitiendo a los pacientes consultar servicios y
-                        especialistas disponibles.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>¿Cuál es el objetivo de la página?</summary>
-
-                    <p>
-                        El objetivo principal es facilitar el acceso a información médica
-                        y permitir que los usuarios puedan reservar citas desde una
-                        plataforma sencilla.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>¿Qué servicios ofrece la plataforma?</summary>
-
-                    <p>
-                        La plataforma ofrece reserva de citas, información sobre
-                        especialidades médicas, atención al paciente y contacto con la clínica
-                    </p>
-                </details>
+            <!-- Misión -->
+            <div class="info-card mb-5">
+              <h2 class="h3 text-primary mb-3"><i class="fas fa-bullseye me-2"></i>Misión</h2>
+              <p>
+                Proporcionar una plataforma accesible y eficiente para la gestión de citas médicas,
+                mejorando la experiencia del paciente mediante tecnología clara y funcional.
+              </p>
+              <p>
+                Nos comprometemos a facilitar la comunicación entre pacientes y profesionales de la salud,
+                optimizando los tiempos de atención y brindando servicios de calidad.
+              </p>
             </div>
 
-            <div class="progreso-seccion">
-                <h3>Progreso de digitalización del sistema</h3>
+            <!-- Visión -->
+            <div class="info-card mb-5">
+              <h2 class="h3 text-primary mb-3"><i class="fas fa-telescope me-2"></i>Visión</h2>
+              <p>
+                Ser una plataforma líder en la gestión de citas médicas, reconocida por su
+                eficiencia, confiabilidad y capacidad de mejorar continuamente los procesos de atención.
+              </p>
+              <p>
+                Buscamos que en el futuro, la gestión de citas médicas sea simple, rápida y accesible
+                para todos los pacientes, sin importar su contexto geográfico o tecnológico.
+              </p>
+            </div>
 
-                <p>Estado actual de implementación de MediCitas Web:</p>
-
-                <div class="progreso-item">
-                    <progress value="85" max="100"></progress>
-                    <p class="porcentaje">85% completado</p>
+            <!-- Valores -->
+            <div class="info-card mb-5">
+              <h2 class="h3 text-primary mb-3"><i class="fas fa-heart me-2"></i>Valores</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="value-item">
+                    <h5><i class="fas fa-check-circle text-success me-2"></i>Transparencia</h5>
+                    <p>Comunicación clara en todos nuestros procesos y servicios.</p>
+                  </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="value-item">
+                    <h5><i class="fas fa-check-circle text-success me-2"></i>Confiabilidad</h5>
+                    <p>Servicios confiables y accesibles para nuestros usuarios.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="value-item">
+                    <h5><i class="fas fa-check-circle text-success me-2"></i>Innovación</h5>
+                    <p>Mejora continua mediante nuevas tecnologías y procesos.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="value-item">
+                    <h5><i class="fas fa-check-circle text-success me-2"></i>Compromiso</h5>
+                    <p>Dedicación al bienestar y satisfacción del paciente.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <hr>
 
-            <div class="progreso-seccion">
-                <h3>Nivel de satisfacción del sistema</h3>
+            <!-- Objetivo -->
+            <div class="info-card">
+              <h2 class="h3 text-primary mb-3"><i class="fas fa-flag me-2"></i>Objetivo General</h2>
+              <p>
+                Proporcionar un sistema integral de gestión de citas médicas que permita
+                a los pacientes acceder a servicios de salud de manera eficiente, segura y confiable,
+                mientras que facilita el trabajo de los profesionales médicos y administrativos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <p>Basado en encuestas de usuarios:</p>
+    <!-- CTA Section -->
+    <section class="gradient-primary py-5 rounded-lg mt-5">
+      <div class="container text-center">
+        <h2 class="mb-4">¿Quieres formar parte de nuestra comunidad?</h2>
+        <p class="fs-5 mb-4">Únete a MediCitas Web y disfruta de una experiencia de atención médica moderna y eficiente.
+        </p>
+        <a href="citas.html" class="btn btn-light btn-lg">
+          <i class="fas fa-calendar-check me-2"></i> Agendar tu Cita
+        </a>
+      </div>
+    </section>
+  </main>
 
-            <meter value="8.5" min="0" max="10" low="4" high="7" optimum="9"></meter>
+  <footer class="bg-light border-top mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0"><strong>MediCitas Web</strong> - Gestión de Citas Médicas</p>
+          <p class="text-muted small">© 2026 Proyecto de Lánder Sánchez</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted small">
+            <i class="fas fa-phone me-1"></i>+593 911 234 560 |
+            <i class="fas fa-envelope me-1"></i> info@medicitas.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-            <p>8.5 / 10 satisfacción promedio</p>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>2026 MediCitas Web</p>
-    </footer>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

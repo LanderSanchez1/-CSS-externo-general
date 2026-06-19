@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MediCitas Web - Registro</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/auth.css">
 </head>
+
 <body>
-  <header>
-    <div class="header-inner">
-      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
-      <h1>MediCitas Web</h1>
+  <!-- Navbar con Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html" style="color: #0b5ea8 !important;">
+        <img src="images/logo.svg" alt="Logo MediCitas" class="logo me-2" style="height: 40px;">
+        <span class="fs-4" style="color: #0b5ea8 !important; opacity: 1 !important;">MediCitas Web</span>
+      </a>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <section id="form-container">
-      <h2>Registro de usuario</h2>
-      <img src="images/icono.png" alt="Registro" style="width: 80px; height: 80px; display: block; margin: 15px auto;">
-      <form action="index.html" method="get" id="form-register">
-        <label for="nombres">Nombres</label>
-        <input id="nombres" name="nombres" type="text" required>
+  <main class="py-5 d-flex align-items-center" style="min-height: 85vh;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+              <h2 class="card-title mb-0 text-center"><i class="fas fa-user-plus me-2"></i>Crear Cuenta</h2>
+            </div>
+            <div class="card-body">
+              <form action="index.html" method="get" id="form-register">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="nombres" class="form-label">Nombres</label>
+                    <input class="form-control" id="nombres" name="nombres" type="text" required placeholder="Juan">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input class="form-control" id="apellidos" name="apellidos" type="text" required
+                      placeholder="Pérez">
+                  </div>
+                </div>
 
-        <label for="apellidos">Apellidos</label>
-        <input id="apellidos" name="apellidos" type="text" required>
+                <div class="mb-3">
+                  <label for="cedula" class="form-label">Cédula</label>
+                  <input class="form-control" id="cedula" name="cedula" type="text" maxlength="10" required
+                    placeholder="1234567890">
+                </div>
 
-        <label for="cedula">Cédula</label>
-        <input id="cedula" name="cedula" type="text" maxlength="10" required>
+                <div class="mb-3">
+                  <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+                  <input class="form-control" id="nacimiento" name="nacimiento" type="date" required>
+                </div>
 
-        <label for="nacimiento">Fecha de nacimiento</label>
-        <input id="nacimiento" name="nacimiento" type="date" required>
+                <div class="mb-3">
+                  <label for="genero" class="form-label">Género</label>
+                  <select class="form-select" id="genero" name="genero" required>
+                    <option value="">-- Seleccione --</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
 
-        <label for="genero">Género</label>
-        <select id="genero" name="genero" required>
-          <option value="">Seleccione</option>
-          <option value="masculino">Masculino</option>
-          <option value="femenino">Femenino</option>
-        </select>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <input class="form-control" id="email" name="email" type="email" required
+                    placeholder="usuario@example.com">
+                </div>
 
-        <label for="email">Correo electrónico</label>
-        <input id="email" name="email" type="email" required>
+                <div class="mb-3">
+                  <label for="regpass" class="form-label">Contraseña</label>
+                  <input class="form-control" id="regpass" name="regpass" type="password" minlength="8" maxlength="16"
+                    required placeholder="Mínimo 8 caracteres">
+                </div>
 
-        <label for="regpass">Contraseña</label>
-        <input id="regpass" name="regpass" type="password" minlength="8" maxlength="16" required>
+                <button type="submit" class="btn btn-primary w-100 mb-3"><i
+                    class="fas fa-check me-2"></i>Registrarse</button>
+              </form>
 
-        <button type="submit">Registrar</button>
-      </form>
+              <hr>
 
-      <div id="enlace-alternativo">
-        <p>¿Ya tienes cuenta? <a href="login.html">Volver al inicio de sesión</a></p>
+              <div class="text-center">
+                <p class="small">¿Ya tienes cuenta? <a href="login.html" class="text-primary fw-bold">Inicia sesión
+                    aquí</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer>
-    <p> 2026 MediCitas Web</p>
+  <footer class="bg-light border-top mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0"><strong>MediCitas Web</strong> - Gestión de Citas Médicas</p>
+          <p class="text-muted small">© 2026 Proyecto de Lánder Sánchez</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted small">
+            <i class="fas fa-phone me-1"></i> +593 2 123 4567 |
+            <i class="fas fa-envelope me-1"></i> info@medicitas.com
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-

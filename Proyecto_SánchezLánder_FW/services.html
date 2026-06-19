@@ -1,128 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MediCitas Web - Servicios</title>
   <link rel="icon" type="image/png" href="./images/servicio.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/services.css">
 </head>
+
 <body>
-  <header>
-    <div class="header-inner">
-      <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
-      <h1>MediCitas Web</h1>
+  <!-- Navbar con Bootstrap -->
+  <!-- Navbar con Bootstrap (Completamente Centrada) -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container d-flex flex-column align-items-center">
+
+      <!-- Contenedor para el Logo / Marca en el Centro -->
+      <div class="w-100 d-flex justify-content-center mb-2">
+        <a class="navbar-brand d-flex align-items-center fw-bold mx-auto" href="index.html"
+          style="color: #0b5ea8 !important;">
+          <img src="images/logo.svg" alt="Logo MediCitas" class="logo me-2" style="height: 40px;">
+          <span class="fs-4" style="color: #0b5ea8 !important; opacity: 1 !important;">MediCitas Web</span>
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa para Móviles -->
+      <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación centrados -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-house me-1"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-circle-info me-1"></i> Acerca
+              de</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html"><i class="fas fa-stethoscope me-1"></i>
+              Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="specialists.html"><i class="fas fa-user-doctor me-1"></i>
+              Especialistas</a></li>
+          <li class="nav-item"><a class="nav-link" href="citas.html"><i class="fas fa-calendar-plus me-1"></i> Citas</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contacto</a>
+          </li>
+          <li class="nav-item"><a class="nav-link ms-lg-2" href="login.html"><i class="fas fa-sign-out-alt me-1"></i>
+              Cerrar sesión</a></li>
+        </ul>
+      </div>
+
     </div>
-    <nav>
-      <ul>
-   <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
-        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
-       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
-        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
-        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
-      </ul>
-    </nav>
-  </header>
+  </nav>
 
-  <main>
-      <section class="content">
-          <h2>Servicios médicos</h2>
-          <p>En MediCitas Web describimos los servicios disponibles y cómo solicitar atención con el personal médico de la clínica.</p>
-       
-          <article>
-              <h3>Reserva de citas</h3>
-              <p>El sistema permite seleccionar el servicio y el especialista, así como consultar los horarios de disponibilidad para programar la cita.</p>
-          </article>
-          <hr>
-          <article>
+  <main class="py-5">
+    <!-- Encabezado -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center">
+          <h1 class="display-5 mb-3"><i class="fas fa-briefcase-medical text-primary me-2"></i>Servicios Médicos</h1>
+          <p class="lead text-muted">En MediCitas Web describimos los servicios disponibles y cómo solicitar atención
+            con el personal médico de la clínica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descripción de servicios -->
+    <section class="py-4 mb-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-stethoscope"></i>
+              </div>
+              <h3>Reserva de Citas</h3>
+              <p>El sistema permite seleccionar el servicio y el especialista, así como consultar los horarios de
+                disponibilidad para programar la cita.</p>
+              <a href="citas.html" class="btn btn-sm btn-outline-primary"><i
+                  class="fas fa-arrow-right me-1"></i>Agendar</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
               <h3>Especialidades</h3>
-              <p>Contamos con varias áreas médicas para atender a toda la familia, desde consultas generales hasta odontología y pediatría.</p>
-          </article>
-          <hr>
-          <article>
-              <h3>Atención a pacientes</h3>
-              <p>El equipo de atención brinda información sobre procesos, documentación necesaria y apoyo para cualquier consulta previa a la cita.</p>
-          </article>
-      </section>
+              <p>Contamos con varias áreas médicas para atender a toda la familia, desde consultas generales hasta
+                odontología y pediatría.</p>
+              <a href="specialists.html" class="btn btn-sm btn-outline-primary"><i
+                  class="fas fa-arrow-right me-1"></i>Ver</a>
+            </div>
+          </div>
 
-    <section class="content">
-        <h3>Descripción de servicios</h3>
-        <table class="tabla-servicios">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>Atención al Paciente</h3>
+              <p>El equipo de atención brinda información sobre procesos, documentación necesaria y apoyo para cualquier
+                consulta previa.</p>
+              <a href="contact.html" class="btn btn-sm btn-outline-primary"><i
+                  class="fas fa-arrow-right me-1"></i>Contactar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabla de servicios -->
+    <section class="py-4 mb-5">
+      <div class="container">
+        <h2 class="h3 text-primary mb-4"><i class="fas fa-list me-2"></i>Descripción de Servicios</h2>
+        <div class="table-responsive">
+          <table class="table table-hover">
             <thead>
-                <tr>
-                    <th>Servicio</th>
-                    <th>Descripción</th>
-                    <th>Atención</th>
-                </tr>
+              <tr>
+                <th><i class="fas fa-briefcase me-2"></i>Servicio</th>
+                <th><i class="fas fa-info-circle me-2"></i>Descripción</th>
+                <th><i class="fas fa-users me-2"></i>Atención</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>Consulta general</strong></td>
-                    <td>Evaluación inicial de síntomas y seguimiento de salud.</td>
-                    <td>Adultos y adolescentes</td>
-                </tr>
-                <tr>
-                    <td><strong>Pediatría</strong></td>
-                    <td>Atención a niños y control del crecimiento infantil.</td>
-                    <td>Niños y adolescentes</td>
-                </tr>
-                <tr>
-                    <td><strong>Odontología</strong></td>
-                    <td>Revisión dental, limpieza y orientación preventiva.</td>
-                    <td>Pacientes de todas las edades</td>
-                </tr>
+              <tr>
+                <td><strong>Consulta General</strong></td>
+                <td>Evaluación inicial de síntomas y seguimiento de salud.</td>
+                <td><span class="badge bg-primary">Adultos y adolescentes</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pediatría</strong></td>
+                <td>Atención a niños y control del crecimiento infantil.</td>
+                <td><span class="badge bg-info">Niños y adolescentes</span></td>
+              </tr>
+              <tr>
+                <td><strong>Odontología</strong></td>
+                <td>Revisión dental, limpieza y orientación preventiva.</td>
+                <td><span class="badge bg-success">Todas las edades</span></td>
+              </tr>
             </tbody>
-        </table>
+          </table>
+        </div>
+      </div>
+    </section>
 
-        <h3>Demanda de servicios médicos</h3>
-
-        <table class="tabla-servicios">
+    <!-- Demanda de servicios -->
+    <section class="py-4">
+      <div class="container">
+        <h2 class="h3 text-primary mb-4"><i class="fas fa-chart-bar me-2"></i>Demanda de Servicios Médicos</h2>
+        <div class="table-responsive">
+          <table class="table table-hover">
             <thead>
-                <tr>
-                    <th>Servicio</th>
-                    <th>Demanda</th>
-                    <th>Nivel de ocupación</th>
-                </tr>
+              <tr>
+                <th><i class="fas fa-briefcase me-2"></i>Servicio</th>
+                <th><i class="fas fa-fire me-2"></i>Demanda</th>
+                <th><i class="fas fa-chart-line me-2"></i>Nivel de Ocupación</th>
+              </tr>
             </thead>
-
             <tbody>
-                <tr>
-                    <td>Consulta general</td>
-                    <td><span class="ocupacion-alta">Alta</span></td>
-                    <td>
-                        <progress value="90" max="100"></progress>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Pediatría</td>
-                    <td><span class="ocupacion-media">Media</span></td>
-                    <td>
-                        <progress value="65" max="100"></progress>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Odontología</td>
-                    <td><span class="ocupacion-baja">Baja</span></td>
-                    <td>
-                        <progress value="40" max="100"></progress>
-                    </td>
-                </tr>
+              <tr>
+                <td><strong>Consulta General</strong></td>
+                <td><span class="badge bg-danger">Alta</span></td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                      <progress value="90" max="100" class="progress"></progress>
+                    </div>
+                    <span class="ms-2">90%</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Pediatría</strong></td>
+                <td><span class="badge bg-warning">Media</span></td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                      <progress value="65" max="100" class="progress"></progress>
+                    </div>
+                    <span class="ms-2">65%</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Odontología</strong></td>
+                <td><span class="badge bg-success">Baja</span></td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                      <progress value="40" max="100" class="progress"></progress>
+                    </div>
+                    <span class="ms-2">40%</span>
+                  </div>
+                </td>
+              </tr>
             </tbody>
-        </table>
-        <p>Estos servicios están diseñados para cubrir las necesidades básicas de atención médica y apoyar el seguimiento de la salud familiar.</p>
+          </table>
+        </div>
+        <div class="alert alert-info mt-4" role="alert">
+          <i class="fas fa-lightbulb me-2"></i>
+          <strong>Nota:</strong> Estos servicios están diseñados para cubrir las necesidades básicas de atención médica
+          y apoyar el seguimiento de la salud familiar.
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-primary py-5 rounded-lg mt-5">
+      <div class="container text-center">
+        <h2 class="mb-4">¿Necesitas atención médica?</h2>
+        <p class="fs-5 mb-4">Consulta nuestros servicios disponibles y elige el que mejor se adapte a tu necesidad.</p>
+        <a href="citas.html" class="btn btn-light btn-lg">
+          <i class="fas fa-calendar-check me-2"></i> Agendar Cita
+        </a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p> 2026 MediCitas Web</p>
+  <footer class="bg-light border-top mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0"><strong>MediCitas Web</strong> - Gestión de Citas Médicas</p>
+          <p class="text-muted small">© 2026 Proyecto de Lánder Sánchez</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted small">
+            <i class="fas fa-phone me-1"></i> +593 2 123 4567 |
+            <i class="fas fa-envelope me-1"></i> info@medicitas.com
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-

@@ -1,105 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MediCitas Web - Contacto</title>
-    <link rel="icon" type="image/png" href="./images/contacto.png">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/contact.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCitas Web - Contacto</title>
+  <link rel="icon" type="image/png" href="./images/contacto.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body>
-    <header>
-        <div class="header-inner">
-            <img src="images/logo.svg" alt="Logo MediCitas" class="logo">
-            <h1>MediCitas Web</h1>
+  <!-- Navbar con Bootstrap -->
+<!-- Navbar con Bootstrap (Completamente Centrada) -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container d-flex flex-column align-items-center">
+      
+      <!-- Contenedor para el Logo / Marca en el Centro -->
+      <div class="w-100 d-flex justify-content-center mb-2">
+        <a class="navbar-brand d-flex align-items-center fw-bold mx-auto" href="index.html" style="color: #0b5ea8 !important;">
+          <img src="images/logo.svg" alt="Logo MediCitas" class="logo me-2" style="height: 40px;">
+          <span class="fs-4" style="color: #0b5ea8 !important; opacity: 1 !important;">MediCitas Web</span>
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa para Móviles -->
+      <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación centrados -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav text-center">
+  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-house me-1"></i> Inicio</a></li>
+  <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-circle-info me-1"></i> Acerca de</a></li>
+  <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-stethoscope me-1"></i> Servicios</a></li>
+  <li class="nav-item"><a class="nav-link" href="specialists.html"><i class="fas fa-user-doctor me-1"></i> Especialistas</a></li>
+  <li class="nav-item"><a class="nav-link" href="citas.html"><i class="fas fa-calendar-plus me-1"></i> Citas</a></li>
+  <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="fas fa-envelope me-1"></i> Contacto</a></li>
+  <li class="nav-item"><a class="nav-link ms-lg-2" href="login.html"><i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión</a></li>
+</ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <section id="seccion-contacto-principal">
+      <h2>Contacto</h2>
+      <img src="images/icono.png" alt="Contacto">
+
+      <p>
+        Nuestro equipo atiende tus dudas y coordina citas médicas con rapidez.
+        Escríbenos o visítanos en nuestras instalaciones.
+      </p>
+    </section>
+
+    <section id="info-contacto">
+      <h3>Información de contacto</h3>
+
+      <ul>
+        <li><strong>Dirección:</strong> Calle 123, Quito</li>
+        <li><strong>Teléfono:</strong> +593 2 123 4567</li>
+        <li><strong>Correo:</strong> info@medicitas.ejemplo</li>
+        <li>
+          <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/_lander_s/" target="_blank">@_lander_s</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="redes-sociales">
+      <h3>Redes sociales</h3>
+      <p>Síguenos para recibir novedades sobre horarios, servicios y atención especializada.</p>
+      <a href="https://www.instagram.com/_lander_s/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+      <a href="mailto:info@medicitas.ejemplo">Email directo</a>
+    </section>
+
+    <section>
+      <h3>Ubicación</h3>
+      <p>Estamos ubicados en el centro de la ciudad, Quito.</p>
+      <p>
+        <a href="https://maps.google.com/?q=Quito,Ecuador" target="_blank" title="Abrir ubicación en Google Maps">
+          Ver ubicación en Google Maps
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h3>Horario de atención</h3>
+      <p><strong>Lunes a viernes:</strong> 08:00 - 17:00</p>
+      <p><strong>Sábados:</strong> 09:00 - 13:00</p>
+      <p>
+        Atendemos consultas presenciales y llamamos para confirmar las citas programadas.
+      </p>
+    </section>
+
+    <section id="formulario-contacto">
+      <h3>Envíanos un mensaje</h3>
+      <form action="contact.html" method="post">
+        <label for="nombre-contacto">Nombre</label>
+        <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre completo" required>
+
+        <label for="email-contacto">Correo electrónico</label>
+        <input id="email-contacto" name="email" type="email" placeholder="ejemplo@correo.com" required>
+
+        <label for="mensaje-contacto">Mensaje</label>
+        <textarea id="mensaje-contacto" name="mensaje" placeholder="Escribe tu consulta" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-light border-top mt-5 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0"><strong>MediCitas Web</strong> - Gestión de Citas Médicas</p>
+          <p class="text-muted small">© 2026 Proyecto de Lánder Sánchez</p>
         </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted small">
+            <i class="fas fa-phone me-1"></i> +593 2 123 4567 |
+            <i class="fas fa-envelope me-1"></i> info@medicitas.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> Acerca de</a></li>
-        <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Servicios</a></li>
-       <li><a href="specialists.html"><i class="fa-solid fa-user-doctor"></i> Especialistas</a></li>
-        <li><a href="citas.html"><i class="fa-solid fa-calendar-plus"></i> Citas</a></li>
-        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-        <li class="right"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="seccion-contacto-principal">
-            <h2>Contacto</h2>
-            <img src="images/icono.png" alt="Contacto">
-
-            <p>
-                Nuestro equipo atiende tus dudas y coordina citas médicas con rapidez.
-                Escríbenos o visítanos en nuestras instalaciones.
-            </p>
-        </section>
-
-        <section id="info-contacto">
-            <h3>Información de contacto</h3>
-
-            <ul>
-                <li><strong>Dirección:</strong> Calle 123, Quito</li>
-                <li><strong>Teléfono:</strong> +593 2 123 4567</li>
-                <li><strong>Correo:</strong> info@medicitas.ejemplo</li>
-                <li>
-                    <strong>Instagram:</strong>
-                    <a href="https://www.instagram.com/_lander_s/" target="_blank">@_lander_s</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="redes-sociales">
-            <h3>Redes sociales</h3>
-            <p>Síguenos para recibir novedades sobre horarios, servicios y atención especializada.</p>
-            <a href="https://www.instagram.com/_lander_s/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-            <a href="mailto:info@medicitas.ejemplo">Email directo</a>
-        </section>
-
-        <section>
-            <h3>Ubicación</h3>
-            <p>Estamos ubicados en el centro de la ciudad, Quito.</p>
-            <p>
-                <a href="https://maps.google.com/?q=Quito,Ecuador" target="_blank" title="Abrir ubicación en Google Maps">
-                    Ver ubicación en Google Maps
-                </a>
-            </p>
-        </section>
-
-        <section>
-            <h3>Horario de atención</h3>
-            <p><strong>Lunes a viernes:</strong> 08:00 - 17:00</p>
-            <p><strong>Sábados:</strong> 09:00 - 13:00</p>
-            <p>
-                Atendemos consultas presenciales y llamamos para confirmar las citas programadas.
-            </p>
-        </section>
-
-        <section id="formulario-contacto">
-            <h3>Envíanos un mensaje</h3>
-            <form action="contact.html" method="post">
-                <label for="nombre-contacto">Nombre</label>
-                <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre completo" required>
-
-                <label for="email-contacto">Correo electrónico</label>
-                <input id="email-contacto" name="email" type="email" placeholder="ejemplo@correo.com" required>
-
-                <label for="mensaje-contacto">Mensaje</label>
-                <textarea id="mensaje-contacto" name="mensaje" placeholder="Escribe tu consulta" required></textarea>
-
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>2026 MediCitas Web</p>
-    </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
